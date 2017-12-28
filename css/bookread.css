@@ -1,0 +1,264 @@
+/*////////////////index页面////////////////////////////////////*/
+body{
+	overflow-x: hidden;
+}
+/*nav*/
+#header .col-md-4 .headSaying{
+	margin-top: 14px;
+	font-size: 18px;
+	color: #aaa;
+}
+#header .navbar-default .navbar-nav>li>a{
+	transition:0.7s;/*动画执行时间*/
+}
+#header .navbar-default .navbar-nav>li>a:hover{
+	color: rgb(97,171,170);
+	transform:rotate(360deg) scale(1.1);/*缩放1.5倍*/
+}
+/*图标位置*/
+.glyphicon{
+	top: 3px;
+}
+/*logo*/
+#logo{
+	margin-top: 60px;
+}
+.col-md-3.logo{
+	height: 50px;
+	margin-left: 95px;
+	margin-top: 5px;
+	background-image: url("../images/logo.png");
+	background-size:contain;
+	background-repeat: no-repeat;
+}
+input.form-control,a.btn.btn-default{
+    margin-top: 15px;
+    border: 1px solid rgb(97,171,170);
+}
+.code{
+	height: 70px;
+	margin-left: 65px;
+	background-image: url('../images/code.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+a.btn.btn-default {
+  padding-left: 10px;
+  color: rgb(97,171,170);
+}
+.col-md-12 {
+	margin-top: 7px;
+  padding: 0;
+}
+/*导航a*/
+#classification .col-md-12 a{
+	font-size: 16px;
+	color: #000;
+	border: 0px;
+	font-weight: bold;
+	background-color: transparent;
+	transition:0.7s;
+}
+#classification .col-md-12 a:hover{
+	background-color: transparent;
+	/*背景色透明*/
+	color: rgb(97,171,170);
+	transform:scale(1.1);
+}
+/*导航li*/
+#classification .nav-tabs>li{
+	padding:0px 25px;
+	margin-bottom: -2px;
+	border-bottom: 2px solid #ddd;
+}
+#classification .nav-tabs>li:hover{
+	border-bottom: 2px solid rgb(97,171,170);
+}
+#classification ul.nav.nav-tabs {
+  border-bottom: 2px solid #ddd;
+}
+
+/*轮播css*/
+#carousel{
+	margin-top: 20px;
+}
+#carousel .col-md-4 a{
+	font-size: 16px;
+	color: #000;
+	border: 0px;
+	background-color: transparent;
+}
+#carousel .nav-tabs>li{
+	padding:0px 10px;
+	margin-bottom: -2px;
+	border-bottom: 2px solid #ddd;
+}
+#carousel .nav-tabs>li:hover{
+	border-bottom: 2px solid rgb(97,171,170);
+}
+#carousel ul.nav.nav-tabs {
+  border:none;
+}
+#carousel .col-md-4 .tab-content{
+	margin: 20px auto;
+}
+#carousel .col-md-4 .tab-content .table td{
+	text-align: center;
+	padding: 9px;
+}
+#carousel .col-md-4 .tab-content .table td:hover{
+	background-color: #eee;
+}
+#carousel .col-md-4 .tab-content .table td a{
+	text-decoration: none;
+	font-size: 12px;
+}
+/*读书咨询*/
+#Consultation .col-md-12>h3,#hotbook .col-md-12>h3{
+	margin-top: 0px;
+	font-size: 20px;
+	font-weight: bold;
+}
+#Consultation .thumbnail .caption h3{
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 5px;
+	/*重要是一行显示省略号*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#Consultation .thumbnail .caption p{
+	margin:0px;
+}
+/*热书推荐*/
+#hotbook>.container>.row{
+	margin-left: 0;
+}
+#hotbook .col-md-12 h3 a{
+	text-decoration: none;
+	font-size: 10px;
+	color: #000;
+}
+#hotbook .col-md-12 h3 a:hover{
+	color: red;
+}
+#hotbook .thumbnail img{
+	transition:0.7s;
+}
+#hotbook .thumbnail img:hover{
+	box-shadow: 4px 4px 5px #aaa;
+	transform:scale(1.1);
+}
+#hotbook .thumbnail h3{
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	/*重要是一行显示省略号*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#hotbook .col-md-9 .col-md-3{
+	width: 20%;
+}
+/*右侧折叠面板*/
+#hotbook .list{
+	margin-top: 8px;
+	font-size: 16px;
+	font-weight: bold;
+}
+#hotbook .list-group{
+	margin-top: 16px;
+}
+#hotbook .list-group p{
+	margin:0px;
+}
+#hotbook .list-group a{
+	text-decoration: none;
+	color: #000;
+}
+#hotbook .list-group i{
+	color: #aaa;
+	font-style: italic;
+}
+#hotbook .list-group .row .col-md-4 img{
+	width: 100%;
+	height: 100%;
+}
+#hotbook .list-group .row .col-md-7 h4{
+	font-size: 16px;
+	margin-top: 0px;
+	margin-bottom: 3px;
+}
+/*小型轮播*/
+#carSilder .change{
+	position: relative;
+	width: 100%;
+	height: 130px;
+	/*overflow: hidden;*/
+	border: 1px solid #aaa;
+	text-align: center;
+}
+#carSilder .change .scroll{
+	position: relative;
+	width: 98%;
+	height: 100%;
+	margin-left: 1%;
+	overflow: hidden;
+}
+#carSilder .change .scroll .imgList{
+	position: absolute;
+	width: 2300px;
+	height: 130px;
+	animation: auto 25s infinite linear;
+	/*left: -1146px;*/
+}
+/*动画*/
+@keyframes auto
+{
+	0%   {left:0px;}
+	25%  {left:-573px;}
+	50%  {left:-1146px;}
+	75%  {left:-573px;}
+	100% {left:0px;}
+}
+#carSilder .change .scroll .imgList img{
+	width: 171px;
+	height: 110px;
+	margin: 10px 10px;
+	float: left;
+}
+/*footer*/
+#footer{
+	height: 100px;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 0px;
+	background-color: #f8f8f8;
+}
+#footer span{
+	display: inline-block;
+	margin:20px 20px;
+}
+#footer a{
+	text-decoration: none;
+	color: #000;
+}
+#footer p{
+	display: block;
+	margin-bottom: 5px;
+}
+/*////////////////list页面////////////////////////////////////*/
+#content .col-md-3,#content .col-md-9{
+	margin-top: 20px;
+}
+#content .col-md-9{
+	padding: 0px;
+}
+#content .col-md-9 img{
+	width: 100%;
+	height: 100%;
+}
