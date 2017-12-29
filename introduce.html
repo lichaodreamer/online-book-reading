@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bookread.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
 <body>
 <!-- header -->
@@ -84,7 +85,22 @@
 					</ul>
 				</div>
 				<div class="col-md-9">
-					
+				  <ul class="nav nav-tabs" role="tablist">
+				    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">关于读书</a></li>
+				    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">免责声明</a></li>
+				    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">相关法律</a></li>
+				    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">联系我们</a></li>
+				  </ul>
+				  <!-- Tab panes -->  
+				  <div class="tab-content">
+				    <div role="tabpanel" class="tab-pane active" id="home">
+				    	<h3>关于读书</h3>
+				    	<p></p>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+				    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+				    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+				  </div>
 				</div>
 			</div>
 		</div>
@@ -99,6 +115,7 @@
 </body>
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		// 导航动画效果开始
@@ -109,6 +126,7 @@
 			$(this).siblings().children("a").css({"color":"#000","font-weight":"normal"});
 		});
 		// 导航动画效果结束
+		new WOW().init();
 	})
 </script>
 </html>
