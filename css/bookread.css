@@ -251,7 +251,7 @@ a.btn.btn-default {
 	display: block;
 	margin-bottom: 5px;
 }
-/*////////////////list页面////////////////////////////////////*/
+/*list页面content部分////////////////////////////////////*/
 #content .col-md-3,#content .col-md-9{
 	margin-top: 20px;
 }
@@ -309,4 +309,179 @@ a.btn.btn-default {
 	color: #000;
 	font-weight: bold;
 }
-/*//////////////*/
+/*introduce页面content部分////////*/
+#subject .col-md-9 h3,#subject .col-md-9 p{
+	margin:10px 20px;
+}
+#subject .col-md-3 li.active{
+	border: none;
+	background-color: #f0f0f0;;
+}
+/*content页面bookbody  图书整体页面*/
+#bookbody .row>.row>.col-md-9{
+	position: relative;
+	margin: 0px;
+	padding: 15px 0px;
+	border-top:1px dashed #aaa;
+}
+#bookbody .breadcrumb{
+	background: none;
+}
+#bookbody>.container>.row>.row>.col-md-9>.col-md-4{
+	width: 200px;
+	height: 240px;
+}
+#bookbody>.container>.row>.row>.col-md-9>.col-md-4>a>img{
+	width: 100%;
+	height: 100%;
+}
+#bookbody .col-md-9>.col-md-8>h3{
+	margin: 7px 20px;
+	font-weight: bold;
+}
+#bookbody .col-md-9>.col-md-8>h3>sub{
+	font-size: 16px;
+	color: #888;
+}
+#bookbody .col-md-9>.col-md-8 p{
+	margin-left: 20px;
+	margin-top: 25px;
+}
+
+#bookbody .col-md-9>.mybutton>.btn-default{
+	margin-top: 0px;
+}
+#bookbody .col-md-9>.mybutton{
+	position: absolute;
+	bottom: 15px;
+	left: 235px;
+}
+#bookbody .col-md-9>.mybutton a{
+		margin-right: 20px;
+}
+/*content页面，图书右侧部分*/
+#bookbody .row>.col-md-3{
+	margin: 15px 0px;
+	padding-left: 30px;
+	border-left: 1px solid #ddd;
+}
+#bookbody .row>.col-md-3 p span{
+	font-size: 20px;
+	color: #F7A731;
+}
+#bookbody .row>.col-md-3 p span:nth-child(6){
+	margin-left: 10px;
+	color: red;
+}
+/*content页面图书tab*/
+#bookbody .nav-tabs>li a{
+	font-size: 16px;
+	color: #000;
+	border: 0px;
+	background-color: transparent;
+}
+#bookbody .nav-tabs>li{
+	padding:0px 10px;
+	margin-bottom: -2px;
+	border-bottom: 2px solid #ddd;
+}
+#bookbody .nav-tabs>li:hover{
+	background-color: transparent;
+	border-bottom: 2px solid rgb(97,171,170);
+}
+#bookbody ul.nav.nav-tabs {
+  border-bottom:2px solid #ddd;
+}
+#bookbody .tab-pane h4{
+	border-left: 4px solid #61ABAA;
+	padding-left: 15px;
+}
+#bookbody .tab-pane h4>span>a{
+	text-decoration: none;
+	color: #66CDAA;
+	font-size: 14px;
+}
+#bookbody .tab-pane p{
+	padding:10px 20px; 
+	text-indent: 28px;
+	color: #888;
+}
+#bookbody .tab-pane p span{
+	color: #000;
+	margin-left: 50px;
+}
+#bookbody .tab-pane h5{
+	border-bottom:1px dashed #F5F2EB;
+	/*margin: 10px 0px;*/
+}
+#bookbody .tab-pane h5 a{
+	display: inline-block;
+	margin: 5px 20px;
+	border-left: 4px solid #61ABAA;
+	padding-left: 20px;
+}
+/*其他图书*/
+#bookbody .list{
+	margin-top: 8px;
+	font-size: 16px;
+	font-weight: bold;
+}
+#bookbody .list-group{
+	margin-top: 16px;
+}
+#bookbody .list-group p{
+	margin:0px;
+}
+#bookbody .list-group a{
+	text-decoration: none;
+	color: #000;
+}
+#bookbody .list-group i{
+	color: #aaa;
+	font-style: italic;
+}
+#bookbody .list-group .row .col-md-4 img{
+	width: 100%;
+	height: 100%;
+}
+#bookbody .list-group .row .col-md-7 h4{
+	font-size: 16px;
+	margin-top: 0px;
+	margin-bottom: 3px;
+}
+/*去掉其他图书左边框*/
+#bookbody .container .comment .col-md-3{
+	border:none;
+}
+/*评论区开始*/
+#bookbody .container .comment h3{
+	font-size: 18px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #ddd;
+}
+#bookbody .container .comment .media{
+	border-bottom: 1px dashed #ddd;
+}
+#bookbody .container .comment .media .media-left img{
+	/*transform: scale(0.6);*/
+}
+#bookbody .container .comment .media .media-body h4{
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+#bookbody .container .comment .media .media-body p{
+	margin-bottom: 10px;
+}
+#bookbody .container .comment .media .media-body p button{
+	color: #aaa;
+	margin-right: 10px;
+	border: none;
+	background-color: transparent;
+}
+#bookbody .container .comment .formcomment{
+	margin-top: 50px;
+}
+#bookbody .container .comment .formcomment textarea{
+	width: 100%;
+	height: 100px;
+}
