@@ -1,8 +1,12 @@
+html,body,h1,h2,h3,h4,h5,h6,p,input,button,div,sub,span,section,ul,li,a{
+	margin: 0px;
+	padding: 0px;
+}
 /*////////////////index页面////////////////////////////////////*/
 body{
 	overflow-x: hidden;
 }
-/*nav*/
+/*nav ，，，，顶部位置*/
 #header .col-md-4 .headSaying{
 	margin-top: 14px;
 	font-size: 18px;
@@ -15,11 +19,11 @@ body{
 	color: rgb(97,171,170);
 	transform:rotate(360deg) scale(1.1);/*缩放1.5倍*/
 }
-/*图标位置*/
+/*图标位置，全局的*/
 .glyphicon{
 	top: 3px;
 }
-/*logo*/
+/*index页面logo处*/
 #logo{
 	margin-top: 60px;
 }
@@ -50,7 +54,7 @@ a.btn.btn-default {
 	margin-top: 7px;
   padding: 0;
 }
-/*导航a*/
+/*index页导航。。。。。。。。。。。。。。*/
 #classification .col-md-12 a{
 	font-size: 16px;
 	color: #000;
@@ -170,7 +174,7 @@ a.btn.btn-default {
 #hotbook .col-md-9 .col-md-3{
 	width: 20%;
 }
-/*右侧折叠面板*/
+/*热书推荐的，右侧折叠面板*/
 #hotbook .list{
 	margin-top: 8px;
 	font-size: 16px;
@@ -241,7 +245,7 @@ a.btn.btn-default {
 #footer{
 	height: 100px;
 	text-align: center;
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 	margin-bottom: 0px;
 	background-color: #f8f8f8;
 }
@@ -257,7 +261,7 @@ a.btn.btn-default {
 	display: block;
 	margin-bottom: 5px;
 }
-/*list页面content部分////////////////////////////////////*/
+/*list页面id=content部分////////////////////////////////////*/
 #content .col-md-3,#content .col-md-9{
 	margin-top: 20px;
 }
@@ -315,7 +319,7 @@ a.btn.btn-default {
 	color: #000;
 	font-weight: bold;
 }
-/*introduce页面content部分////////*/
+/*introduce页面部分////////////////////////////////////*/
 #subject .col-md-9 h3,#subject .col-md-9 p{
 	margin:10px 20px;
 }
@@ -323,7 +327,7 @@ a.btn.btn-default {
 	border: none;
 	background-color: #f0f0f0;;
 }
-/*content页面bookbody  图书整体页面*/
+/*content页面id=bookbody图书整体页面*/
 #bookbody .row>.row>.col-md-9{
 	position: relative;
 	margin: 0px;
@@ -365,11 +369,14 @@ a.btn.btn-default {
 #bookbody .col-md-9>.mybutton a{
 		margin-right: 20px;
 }
-/*content页面，图书右侧部分*/
+/*content页面id="bookbody"，图书右侧、、、、、、、、、、、、、、、、、、部分*/
 #bookbody .row>.col-md-3{
 	margin: 15px 0px;
 	padding-left: 30px;
 	border-left: 1px solid #ddd;
+}
+#bookbody .row>.col-md-3 p{
+	margin: 8px 0px;
 }
 #bookbody .row>.col-md-3 p span{
 	font-size: 20px;
@@ -399,6 +406,7 @@ a.btn.btn-default {
   border-bottom:2px solid #ddd;
 }
 #bookbody .tab-pane h4{
+	margin-top: 15px;
 	border-left: 4px solid #61ABAA;
 	padding-left: 15px;
 }
@@ -435,7 +443,7 @@ a.btn.btn-default {
 #bookbody .list-group{
 	margin-top: 16px;
 }
-#bookbody .list-group p{
+#bookbody .list-group .list-group-item p{
 	margin:0px;
 }
 #bookbody .list-group a{
@@ -461,15 +469,13 @@ a.btn.btn-default {
 }
 /*评论区开始*/
 #bookbody .container .comment h3{
+	margin-top: 20px;
 	font-size: 18px;
 	padding-bottom: 10px;
 	border-bottom: 2px solid #ddd;
 }
 #bookbody .container .comment .media{
 	border-bottom: 1px dashed #ddd;
-}
-#bookbody .container .comment .media .media-left img{
-	/*transform: scale(0.6);*/
 }
 #bookbody .container .comment .media .media-body h4{
 	font-size: 14px;
@@ -490,4 +496,180 @@ a.btn.btn-default {
 #bookbody .container .comment .formcomment textarea{
 	width: 100%;
 	height: 100px;
+}
+/*阅读页面---------------------------------------------------------------------*/
+#reading{
+	width: 100%;
+	background-color: #EFE0CB;
+}
+#reading .row .col-md-12{
+	margin-top: 85px;
+	border:1px solid #E2CFAB;
+	background-color: #FCF5ED;
+}
+#reading .row .col-md-12 h5 p{
+	padding: 20px;
+	font-size: 24px;
+	display: inline-block;
+	font-weight: bold;
+}
+#reading .row .col-md-12 h5 a{
+	color: #61ABAA;
+	border-color: #61ABAA;
+	background-color: #FCF5ED;
+	margin-top: 0px;
+}
+#reading .row .col-md-12 h5 a:hover{
+	color: #fff;
+	background-color: #61ABAA;
+}
+#reading .row .col-md-12 h5>.btn-group{
+	padding: 20px;
+	background: transparent; /*完全透明*/
+	opacity: 0.1;
+}
+#reading .row .col-md-12 h5>.btn-group:hover{
+	opacity: 1;
+}
+#reading .row .col-md-12 h5 a span.glyphicon{
+	top: 2px;
+}
+#reading .row .col-md-12 h5 .dropdown-menu{
+	padding: 0px;
+}
+#reading .row .col-md-12 h5 .dropdown-menu span{
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	border-radius:50%;
+}
+#reading .row .col-md-12 h5 .dropdown-menu li:nth-child(1) span{
+	background-color: #EFE0CB;
+}
+#reading .row .col-md-12 h5 .dropdown-menu li:nth-child(2) span{
+	background-color: #EFEFEF;
+}
+#reading .row .col-md-12 h5 .dropdown-menu li:nth-child(3) span{
+	background-color: #D2E6FA;
+}
+#reading .row .col-md-12 h5 .dropdown-menu li:nth-child(4) span{
+	background-color: #D2EFC3;
+}
+#reading .row .col-md-12 h5 .dropdown-menu li:nth-child(5) span{
+	background-color: #9A9A9A;
+}
+#reading .row .col-md-12 .readtitle p{
+	font-size: 16px;
+	color: #999;
+	padding-left: 20px;
+}
+#reading .row .col-md-12 .readtitle h3,#reading .row .col-md-12 .readtitle h5{
+	margin-top: 10px;
+	text-align: center;
+}
+#reading .row .col-md-12 .readbody{
+	margin: 10px  auto;
+	width: 93%;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+#reading .row .col-md-12 .readbody pre{
+	white-space: pre-wrap;
+	text-indent: 40px;
+	font-size: 16px;
+	line-height: 38px;
+	background-color: #FCF5ED;
+	border: none;
+}
+#reading .row .col-md-12 .jump p{
+	text-align: center;
+	margin: 30px;
+}
+#reading .row .col-md-12 .jump a{
+	border-radius: 0%;
+	color: #000;
+	border: 1px solid #ddd;
+	margin-top: 0px;
+}
+#reading .row .col-md-12 .jump a:nth-child(2){
+	margin: 0px 20px;
+}
+#reading .row .col-md-12 .jump a:hover{
+	color: #D47E74;
+}
+#share_button{
+	position: fixed;
+}
+/*/person页面个人中心//////////////////////////////////////////////////////////*/
+#center{
+	margin: 20px 0px;
+}
+#center .col-md-1{
+	width: 50px;
+}
+#center .col-md-2{
+	margin:0px 20px; 
+	padding: 0px;
+}
+#center .col-md-9{
+	/*border: 2px solid #ddd;*/
+}
+#center .col-md-2 a{
+	text-decoration: none;
+	color: #aaa;
+	letter-spacing:3px;
+}
+#center .col-md-2 a:hover{
+	cursor:pointer;
+}
+#center .col-md-2 .leftlist .listitem{
+	list-style: none;
+	width: 100%;
+	height: 43px;
+	border: 2px solid #ddd;
+	margin-top: -2px;
+	line-height: 40px;
+	padding-left: 35px;
+}
+#center .col-md-2 .leftlist .active{
+	background-color: #eee;
+}
+/*/person页面个人资料///////*/
+#center .col-md-9 .row{
+	border: 2px solid #ddd;
+}
+#center .col-md-9 .myself .col-md-2{
+	padding:30px 0px;
+	margin:0px;
+	text-align: center;
+} 
+#center .col-md-9 .myself .col-md-10{
+	padding-top: 30px;
+	padding-left: 0px;
+}
+#center .col-md-9 .myself .col-md-10 p{
+	color: #aaa;
+}
+#center .col-md-9 .myself .col-md-10 p span{
+	color: #000;
+	font-weight: bold;
+	font-size: 14px;
+}
+#center .col-md-9 .person table{
+	margin-bottom: 0px;
+}
+#center .col-md-9 .person table caption{
+	padding-left: 15px;
+}
+#center .col-md-9 .person table th{
+	padding-left: 30px;
+	line-height: 45px;
+}
+#center .col-md-9 .person table td{
+	padding-left: 30px;
+}
+/*标签操作，仿后台*/
+#center .col-md-9 .person table ul li{
+	list-style: none;
+	float: left;
 }

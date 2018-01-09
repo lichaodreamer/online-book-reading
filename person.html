@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>个人中心</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bookread.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+</head>
+<body>
+<!-- header -->
+<section id="header">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<p class="headSaying">品国学经典，扬中华文明!</p>
+				</div>
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">未登录</a></li>
+							<li><a href="#">登录</a></li>
+							<li><a href="#">注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</section>
+	
+	<!-- logo -->
+	<section id="logo">
+		<div class="row">
+			<div class="col-md-3 logo"></div>
+			<div class="col-md-4">
+				<div class="input-group">
+		      <input type="text" class="form-control" placeholder="经典图书">
+		      <span class="input-group-btn">
+		        <a href="" class="btn btn-default" type="button">搜索</a>
+		      </span>
+		    </div>
+  		</div>
+			<div class="col-md-2">
+				<div class="btn-group pull-right">
+		    	<a href="" type="button" class="btn btn-default"><span class="glyphicon glyphicon glyphicon-bookmark"></span>&nbsp;我的书签</a>
+		    	<a href="" type="button" class="btn btn-default"><span class="glyphicon glyphicon glyphicon-book"></span>&nbsp;我的书架</a>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="code"></div>
+			</div>
+		</div>
+	</section>
+	<!-- 分类导航 -->
+	<section id="classification">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="nav nav-tabs">
+					  <li role="presentation"><a href="index.html">网站首页</a></li>
+					  <li role="presentation"><a href="list.html">名著经典</a></li>
+					  <li role="presentation"><a href="list.html">文学经典</a></li>
+					  <li role="presentation"><a href="list.html">诗词文学</a></li>
+					  <li role="presentation"><a href="list.html">儒家哲学</a></li>
+					  <li role="presentation"><a href="list.html">道家哲学</a></li>
+					  <li role="presentation" class="pull-right"><a href="#"><span class="glyphicon glyphicon glyphicon-user"></span>&nbsp;个人中心</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<ul class="leftlist">
+						<li class="listitem active">
+							<a data-toggle="tab"><span class="glyphicon glyphicon glyphicon-user"></span>&nbsp;个人资料</a>
+						</li>
+						<li class="listitem">
+							<a data-toggle="tab"><span class=" glyphicon glyphicon-bookmark"></span>&nbsp;我的书签</a>
+						</li>
+						<li class="listitem">
+							<a data-toggle="tab"><span class=" glyphicon glyphicon-book"></span>&nbsp;我的书架</a>
+						</li>
+						<li class="listitem">
+							<a data-toggle="tab"><span class="glyphicon glyphicon-envelope"></span>&nbsp;我的评论</a>
+						</li>
+						<li class="listitem">
+							<a data-toggle="tab"><span class="glyphicon glyphicon-open"></span>&nbsp;上传图书</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-9">
+					<div class="row person myself">
+						<div class="col-md-2">
+							<img src="images/userPhoto/user.png">
+						</div>
+						<div class="col-md-10">
+							<p>昵称：<span>admin</span>&nbsp;&nbsp;&nbsp;<sub>男</sub><span class="pull-right glyphicon glyphicon glyphicon-pencil" data-toggle="modal" data-target="#exampleModal"></span></p>
+							<p>账号：<span>15232182923</span></p>
+							<p>身份：<span>管理员</span></p>
+						</div>
+					</div>
+					<div class="row person" style="display: none;">
+						<div class="col-md-12">
+							<table class="table table-responsive table-hover">
+							<caption><span class="glyphicon glyphicon glyphicon-bookmark"></span>&nbsp;我的书签</caption>
+								<thead>
+									<tr>
+										<th>标签名</th>
+										<th>书名</th>
+										<th>章节名</th>
+										<th>时间</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>标签名1</td>
+										<td>红楼梦</td>
+										<td>第一回名</td>
+										<td>2014-2-2</td>
+										<td>
+											<ul>
+											  <li><a href="">修改</a></li>
+											  <li><a href="">删除</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>标签名2</td>
+										<td>红楼梦</td>
+										<td>第一回名</td>
+										<td>2014-4-2</td>
+										<td>
+											<ul>
+											  <li><a href="">修改</a></li>
+											  <li><a href="">删除</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>标签名3</td>
+										<td>西游记</td>
+										<td>第一章名</td>
+										<td>2015-3-5</td>
+										<td>
+											<ul>
+											  <li><a href="">修改</a></li>
+											  <li><a href="">删除</a></li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+					</div>
+					<div class="row person" style="display: none;">
+						<div class="col-md-12">
+							<table class="table table-responsive table-hover">
+							<caption><span class="glyphicon glyphicon glyphicon-book"></span>&nbsp;我的书架</caption>
+								<thead>
+									<tr>
+										<th>书名</th>
+										<th>作者</th>
+										<th>类型</th>
+										<th>时间</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>红楼梦</td>
+										<td>曹雪芹</td>
+										<td>经典名著</td>
+										<td>2014-2-2</td>
+										<td>
+											<ul>
+											  <li><a href="">修改</a></li>
+											  <li><a href="">删除</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>红楼梦</td>
+										<td>曹雪芹</td>
+										<td>经典名著</td>
+										<td>2014-2-2</td>
+										<td>
+											<ul>
+											  <li><a href="">修改</a></li>
+											  <li><a href="">删除</a></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>红楼梦</td>
+										<td>曹雪芹</td>
+										<td>经典名著</td>
+										<td>2014-2-2</td>
+										<td>
+											<ul>
+											  <li><a href="">修改</a></li>
+											  <li><a href="">删除</a></li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row person" style="display: none;">
+						<div class="col-md-12">
+							<table class="table table-responsive table-hover">
+							<caption><span class="glyphicon glyphicon-envelope"></span>&nbsp;我的评论</caption>
+								<thead>
+									<tr>
+										<th>书名</th>
+										<th>作者</th>
+										<th>类型</th>
+										<th>时间</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>红楼梦</td>
+										<td>曹雪芹</td>
+										<td>经典名著</td>
+										<td>2014-2-2</td>
+									</tr>
+									<tr>
+										<td>红楼梦</td>
+										<td>曹雪芹</td>
+										<td>经典名著</td>
+										<td>2014-2-2</td>
+									</tr>
+									<tr>
+										<td>红楼梦</td>
+										<td>曹雪芹</td>
+										<td>经典名著</td>
+										<td>2014-2-2</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row person" style="display: none;">
+						<div class="col-md-12">
+							<table class="table table-responsive table-hover">
+							<caption><span class="glyphicon glyphicon-open"></span>&nbsp;上传图书</caption>
+								<thead>
+									<tr>
+										<th>书名</th>
+										<th>作者</th>
+										<th>类型</th>
+										<th>时间</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>红楼梦</td>
+										<td>曹雪芹</td>
+										<td>经典名著</td>
+										<td>2014-2-2</td>
+									</tr>
+									<tr>
+										<td>红楼梦</td>
+										<td>曹雪芹</td>
+										<td>经典名著</td>
+										<td>2014-2-2</td>
+									</tr>
+									<tr>
+										<td>红楼梦</td>
+										<td>曹雪芹</td>
+										<td>经典名著</td>
+										<td>2014-2-2</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					</div>
+					<!-- 编辑个人资料模态框 -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">编辑信息</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">昵称:</label>
+            <input type="text" class="form-control" placeholder="admin" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">账号:</label>
+            <input type="text" class="form-control" placeholder="15232182923" id="message-text" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" class="btn btn-primary">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 编辑个人资料模态框 -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="footer">
+		<span><a href="introduce.html">关于读书</a></span>
+		<span><a href="introduce.html">免责声明</a></span>
+		<span><a href="introduce.html">相关法律</a></span>
+		<span><a href="introduce.html">联系我们</a></span>
+		<p>Copyright © 古典文学 www.gudian.com 2006-2016, All Rights Reserved. 鄂ICP备15019699号-2</p>
+	</section>
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// 导航动画效果开始
+		$("#classification li").click(function(){
+			$(this).css({"border-bottom-color":"#66CDAA"});
+			$(this).siblings().css({"border-bottom-color":"#ddd"});
+			$(this).children("a").css({"color":"#66CDAA","font-weight":"bold"});
+			$(this).siblings().children("a").css({"color":"#000","font-weight":"normal"});
+		});
+		// 导航动画效果结束
+		// 切换开始
+		var lists=$("#center .leftlist .listitem");
+		var person=$("#center .person")
+		lists.click(function(){
+			let i=$(this).index();
+			person.eq(i).show(500).siblings().hide(500);
+		});
+
+		console.log(person);
+
+		new WOW().init();
+		
+	})
+</script>
+</html>
