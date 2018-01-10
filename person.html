@@ -91,7 +91,7 @@
 							<a data-toggle="tab"><span class="glyphicon glyphicon-envelope"></span>&nbsp;我的评论</a>
 						</li>
 						<li class="listitem">
-							<a data-toggle="tab"><span class="glyphicon glyphicon-open"></span>&nbsp;上传图书</a>
+							<a data-toggle="tab"><span class="glyphicon glyphicon-cloud"></span>&nbsp;云图书</a>
 						</li>
 					</ul>
 				</div>
@@ -102,9 +102,17 @@
 							<img src="images/userPhoto/user.png">
 						</div>
 						<div class="col-md-10">
-							<p>昵称：<span>admin</span>&nbsp;&nbsp;&nbsp;<sub>男</sub><span class="pull-right glyphicon glyphicon glyphicon-pencil" data-toggle="modal" data-target="#exampleModal"></span></p>
-							<p>账号：<span>15232182923</span></p>
+							<div class="col-md-6">
+								<p>昵称：<span>admin</span>&nbsp;&nbsp;&nbsp;<sub>男</sub></p>
+							<p>账号：<span>rundreamer</span></p>
 							<p>身份：<span>管理员</span></p>
+							</div>
+							<div class="col-md-6">
+								<h5>联系方式:<span class="pull-right glyphicon glyphicon glyphicon-pencil" data-toggle="modal" data-target="#exampleModal"></span></h5>
+								<p>电话：<span>15232182923</span></p>
+								<p>Email：<span>1523@.com</span></p>
+							</div>
+							
 						</div>
 					</div>
 					<div class="row person" style="display: none;">
@@ -128,7 +136,7 @@
 										<td>2014-2-2</td>
 										<td>
 											<ul>
-											  <li><a href="">修改</a></li>
+											  <li><a href="" data-toggle="modal" data-target="#bookmarks">修改&nbsp;&nbsp;</a></li>
 											  <li><a href="">删除</a></li>
 											</ul>
 										</td>
@@ -140,7 +148,7 @@
 										<td>2014-4-2</td>
 										<td>
 											<ul>
-											  <li><a href="">修改</a></li>
+											  <li><a href="" data-toggle="modal" data-target="#bookmarks">修改&nbsp;&nbsp;</a></li>
 											  <li><a href="">删除</a></li>
 											</ul>
 										</td>
@@ -152,7 +160,7 @@
 										<td>2015-3-5</td>
 										<td>
 											<ul>
-											  <li><a href="">修改</a></li>
+											  <li><a href="" data-toggle="modal" data-target="#bookmarks">修改&nbsp;&nbsp;</a></li>
 											  <li><a href="">删除</a></li>
 											</ul>
 										</td>
@@ -182,7 +190,6 @@
 										<td>2014-2-2</td>
 										<td>
 											<ul>
-											  <li><a href="">修改</a></li>
 											  <li><a href="">删除</a></li>
 											</ul>
 										</td>
@@ -194,7 +201,6 @@
 										<td>2014-2-2</td>
 										<td>
 											<ul>
-											  <li><a href="">修改</a></li>
 											  <li><a href="">删除</a></li>
 											</ul>
 										</td>
@@ -206,7 +212,6 @@
 										<td>2014-2-2</td>
 										<td>
 											<ul>
-											  <li><a href="">修改</a></li>
 											  <li><a href="">删除</a></li>
 											</ul>
 										</td>
@@ -224,6 +229,7 @@
 										<th>书名</th>
 										<th>作者</th>
 										<th>类型</th>
+										<th>内容</th>
 										<th>时间</th>
 									</tr>
 								</thead>
@@ -232,18 +238,21 @@
 										<td>红楼梦</td>
 										<td>曹雪芹</td>
 										<td>经典名著</td>
+										<td>评论内容评论内容评论内容评论内容评论内容</td>
 										<td>2014-2-2</td>
 									</tr>
 									<tr>
 										<td>红楼梦</td>
 										<td>曹雪芹</td>
 										<td>经典名著</td>
+										<td>评论内容评论内容评论内容评论内容评论内容</td>
 										<td>2014-2-2</td>
 									</tr>
 									<tr>
 										<td>红楼梦</td>
 										<td>曹雪芹</td>
 										<td>经典名著</td>
+										<td>评论内容评论内容评论内容评论内容评论内容</td>
 										<td>2014-2-2</td>
 									</tr>
 								</tbody>
@@ -253,13 +262,16 @@
 					<div class="row person" style="display: none;">
 						<div class="col-md-12">
 							<table class="table table-responsive table-hover">
-							<caption><span class="glyphicon glyphicon-open"></span>&nbsp;上传图书</caption>
+							<caption><span class="glyphicon glyphicon-cloud"></span>&nbsp;云图书
+							<span class="glyphicon glyphicon-open pull-right	"><a href=""  data-toggle="modal" data-target="#myupdatabook">上传图书</a></span>
+							</caption>
 								<thead>
 									<tr>
 										<th>书名</th>
 										<th>作者</th>
 										<th>类型</th>
 										<th>时间</th>
+										<th>操作</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -268,18 +280,36 @@
 										<td>曹雪芹</td>
 										<td>经典名著</td>
 										<td>2014-2-2</td>
+										<td>
+											<ul>
+												<li><a href="">下载&nbsp;&nbsp;</a></li>
+											  <li><a href="">删除</a></li>
+											</ul>
+										</td>
 									</tr>
 									<tr>
 										<td>红楼梦</td>
 										<td>曹雪芹</td>
 										<td>经典名著</td>
 										<td>2014-2-2</td>
+										<td>
+											<ul>
+												<li><a href="">下载&nbsp;&nbsp;</a></li>
+											  <li><a href="">删除</a></li>
+											</ul>
+										</td>
 									</tr>
 									<tr>
 										<td>红楼梦</td>
 										<td>曹雪芹</td>
 										<td>经典名著</td>
 										<td>2014-2-2</td>
+										<td>
+											<ul>
+												<li><a href="">下载&nbsp;&nbsp;</a></li>
+											  <li><a href="">删除</a></li>
+											</ul>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -301,8 +331,12 @@
             <input type="text" class="form-control" placeholder="admin" id="recipient-name">
           </div>
           <div class="form-group">
-            <label for="message-text" class="control-label">账号:</label>
+            <label for="message-text" class="control-label">电话:</label>
             <input type="text" class="form-control" placeholder="15232182923" id="message-text" />
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Email:</label>
+            <input type="text" class="form-control" placeholder="152@.com" id="message-text" />
           </div>
         </form>
       </div>
@@ -314,6 +348,66 @@
   </div>
 </div>
 <!-- 编辑个人资料模态框 -->
+<!-- 书签模态框 -->
+<div class="modal fade" id="bookmarks" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">书签信息</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">书签名:</label>
+            <input type="text" class="form-control" placeholder="书签名" id="recipient-name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" class="btn btn-primary">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 书签模态框 -->
+<!-- 图书上传功能 -->
+<div class="modal fade" id="myupdatabook" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">上传图书信息</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">书名:</label>
+            <input type="text" class="form-control" placeholder="书名" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">作者:</label>
+            <input type="text" class="form-control" placeholder="作者" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">类型:</label>
+            <input type="text" class="form-control" placeholder="类型" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">类型:</label>
+            <textarea class="form-control" placeholder="简介" id="recipient-name"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" class="btn btn-primary">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 图书上传功能 -->
 				</div>
 			</div>
 		</div>
