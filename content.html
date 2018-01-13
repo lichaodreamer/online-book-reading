@@ -352,65 +352,6 @@
 </body>
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		// 导航动画效果开始
-		$("#classification li").click(function(){
-			$(this).css({"border-bottom-color":"#66CDAA"});
-			$(this).siblings().css({"border-bottom-color":"#ddd"});
-			$(this).children("a").css({"color":"#66CDAA","font-weight":"bold"});
-			$(this).siblings().children("a").css({"color":"#000","font-weight":"normal"});
-		});
-		// 导航动画效果结束
-		$("#bookbody li").click(function(){
-			$(this).css({"border-bottom-color":"#66CDAA"});
-			$(this).siblings().css({"border-bottom-color":"#ddd"});
-			$(this).children("a").css({"color":"#66CDAA","font-weight":"bold"});
-			$(this).siblings().children("a").css({"color":"#000","font-weight":"normal"});
-		});
-		//排行榜效果
-		$("#bookbody .list-group-item").mousemove(function(){
-			$(this).children("p").css({"display":"none"});
-			$(this).children(".row").css({"display":"block"});
-			$(this).siblings().children("p").css({"display":"block"});
-			$(this).siblings().children(".row").css({"display":"none"});
-		})
-		// 目录展开 1：通过ajax 添加h5***  2：display:none
-		var h5s=$("#myTabContent h5");
-		var open = $("#myTabContent .pull-right>a");
-		function auto(){
-			let l=h5s.length
-			for(let i=0;i<l;i++){
-				if(i<7){
-					h5s.eq(i).css({"display":"block"})
-				}else{
-					h5s.eq(i).css({"display":"none"})
-				}
-			}
-		}
-		auto();//前7章自动展开的
-		//点击控制展开
-		var mouse=0;//鼠标点击0-未点击，1-点击
-		open.click(function(){
-			if(mouse==0){
-				h5s.css({"display":"block"});
-				mouse=1;
-				open.html("收起");
-			}else{
-				auto();
-				mouse=0;
-				open.html("展开");
-			}
-
-		})
-		// 点击禁用
-		$("#bookbody .comment .media .media-body p button").click(function(){
-			$(this).attr({"disabled":"disabled"});
-			// 这里可以进行入库存储点赞信息
-		})
-		
-
-		
-	})
-</script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/myslider.js"></script>
 </html>

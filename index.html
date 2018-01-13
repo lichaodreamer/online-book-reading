@@ -629,32 +629,5 @@
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/wow.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		// 导航动画效果开始
-		$("#classification li").click(function(){
-			$(this).css({"border-bottom-color":"#66CDAA"});
-			$(this).siblings().css({"border-bottom-color":"#ddd"});
-			$(this).children("a").css({"color":"#66CDAA","font-weight":"bold"});
-			$(this).siblings().children("a").css({"color":"#000","font-weight":"normal"});
-		});
-		// 导航动画效果结束
-		// 轮播右侧动画效果
-		$("#carousel li").click(function(){
-			$(this).css({"border-bottom-color":"#66CDAA"});
-			$(this).siblings().css({"border-bottom-color":"#ddd"});
-			$(this).children("a").css({"color":"#66CDAA","font-weight":"bold"});
-			$(this).siblings().children("a").css({"color":"#000","font-weight":"normal"});
-		});
-		// 轮播右侧动画效果结束
-		//排行榜效果
-		$("#hotbook .list-group-item").mousemove(function(){
-			$(this).children("p").css({"display":"none"});
-			$(this).children(".row").css({"display":"block"});
-			$(this).siblings().children("p").css({"display":"block"});
-			$(this).siblings().children(".row").css({"display":"none"});
-		})
-		new WOW().init();
-	})
-</script>
+<script type="text/javascript" src="js/myslider.js"></script>
 </html>
