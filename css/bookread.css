@@ -185,6 +185,10 @@ a.btn.btn-default {
 }
 #hotbook .list-group p{
 	margin:0px;
+	max-width: 125px;
+	max-height: 60px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 #hotbook .list-group a{
 	text-decoration: none;
@@ -287,37 +291,16 @@ a.btn.btn-default {
 	color: rgb(97,171,170);
 	margin: 15px;
 }
-#content .col-md-9 .list-group li{
-	border-radius: 0px;
+#content .col-md-9 table{
+	border:1px solid #ddd;
+	text-align: center;
 }
-#content .col-md-9 .list-group .row{
-	margin: 10px 0px;
+#content .col-md-9 table th{
+	text-align: center;
 }
-#content .col-md-9 .list-group .container{
-	width: 100%;
-}
-#content .col-md-9 .list-group li .col-md-6{
-	/*border:1px solid red;*/
-	padding-left:0px; 
-}
-#content .col-md-9 .list-group li .col-md-6 .booklistleft{
-	float: left;
-	width: 20%;
-}
-#content .col-md-9 .list-group li .col-md-6 .booklistright{
-	float: left;
-	width: 80%;
-}
-#content .col-md-9 .list-group li .col-md-6 .booklistright h4{
-	margin: 0px 30px;
-}
-#content .col-md-9 .list-group li .col-md-6 .booklistright p{
-	margin: 10px 30px;
-}
-#content .col-md-9 .list-group li .col-md-6 .booklistright a{
-	text-decoration: none;
-	color: #000;
-	font-weight: bold;
+#content .col-md-9 table td p span{
+	text-indent: 40px;
+	color: #aaa;
 }
 /*introduce页面部分////////////////////////////////////*/
 #subject .col-md-9 h3,#subject .col-md-9 p{
