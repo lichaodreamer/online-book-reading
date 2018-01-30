@@ -510,6 +510,7 @@ a.btn.btn-default {
 	padding: 20px;
 	background: transparent; /*完全透明*/
 	opacity: 0.1;
+	margin-right: 40px;
 }
 #reading .row .col-md-12 h5>.btn-group:hover{
 	opacity: 1;
@@ -583,6 +584,28 @@ a.btn.btn-default {
 #share_button{
 	position: fixed;
 }
+/*reading页面模态框*/
+/*reading页面模态框*/
+#reading .modalFrame{
+	position: fixed;
+	top: 30%;
+	left: 45%;
+	height: 35px;
+	color: #fff;
+	padding:5px 10px;
+	/*line-height: 30px;*/
+	border-radius: 5%;
+	background-color: rgba(124,124,124,0.8);
+	display: none;
+}
+/*小书签页标*/
+#reading .row .col-md-12 h5 #markicon{	
+    position: absolute;
+    color: red;
+    font-size: 28px;
+    top: 0px;
+    right: 10px;
+}
 /*/person页面个人中心//////////////////////////////////////////////////////////*/
 #center{
 	margin: 20px 0px;
@@ -617,9 +640,14 @@ a.btn.btn-default {
 #center .col-md-2 .leftlist .active{
 	background-color: #eee;
 }
+#center .col-md-2 .leftlist .active a{
+	color: #61ABAA;
+	font-weight: bold;
+	font-size: 15px;
+}
 /*/person页面个人资料///////*/
 #center .col-md-9 .row{
-	border: 2px solid #ddd;
+	/*border: 2px solid #ddd;*/
 }
 #center .col-md-9 .myself .col-md-2{
 	padding:30px 0px;
@@ -641,11 +669,11 @@ a.btn.btn-default {
 #center .col-md-9 .person table{
 	margin-bottom: 0px;
 }
-#center .col-md-9 .person table caption{
-	padding-left: 15px;
+#center .col-md-9 .person table thead,#center .col-md-9 .person table tbody{
+	border:2px solid #ddd;
 }
 #center .col-md-9 .person table th{
-	padding-left: 30px;
+	padding:0px 30px;
 	line-height: 45px;
 }
 #center .col-md-9 .person table td{

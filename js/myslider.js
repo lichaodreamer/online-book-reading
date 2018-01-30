@@ -79,10 +79,10 @@ $(document).ready(function(){
 		//introduce页面的切换结束
 		// person页面开始
 		// 切换开始
-		var lists=$("#center .leftlist .listitem");
+		var lists=$("#center .leftlist .listitem a");
 		var person=$("#center .person")
 		lists.click(function(){
-			let i=$(this).index();
+			let i=$(this).parent().index();
 			person.eq(i).show(500).siblings().hide(500);
 		});
 		// person页面结束
@@ -203,7 +203,7 @@ $(document).ready(function(){
 			  isflsgrn = true;
 			}
 			$("#header").hide(1000);
-      $("#footer").hide(1000);
+      		$("#footer").hide(1000);
 		}
     //退出全屏
     var cfScreen = function(){
