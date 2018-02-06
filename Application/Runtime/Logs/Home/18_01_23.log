@@ -1,0 +1,512 @@
+[ 2018-01-23T22:52:59+08:00 ] ::1 /bookreading/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000094s ]
+INFO: [ app_init ] --END-- [ RunTime:0.038167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003296s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0379s ]
+SQL: SELECT * FROM `book` LIMIT 10   [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.067263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.067810s ]
+NOTIC: [8] Undefined variable: b E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 330 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.350425s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.350986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.026050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.026491s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010943s ]
+
+[ 2018-01-23T22:54:39+08:00 ] ::1 /bookreading/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001306s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `book` LIMIT 10   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000375s ]
+NOTIC: [8] Undefined variable: b E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 330 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025833s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2018-01-23T22:54:49+08:00 ] ::1 /bookreading/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `book` LIMIT 10   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+NOTIC: [8] Undefined variable: b E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 330 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025416s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000893s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2018-01-23T22:57:24+08:00 ] ::1 /bookreading/index.php/Home/Index/content/id/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0255s ]
+SQL: SHOW COLUMNS FROM `charpter` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `book` WHERE `bid` = 10 OR `bname` = '10'  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `charpter` WHERE `bid` = 10 OR `bname` = '10'  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '名著'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `comment` WHERE `bid` = 10 OR `bname` = '10'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.021851s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.022070s ]
+NOTIC: [8] Undefined index: bscore E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\c98d6cc5834e97afa6ab2d2fc316c419.php 第 209 行.
+NOTIC: [8] Undefined index: bscore E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\c98d6cc5834e97afa6ab2d2fc316c419.php 第 217 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.136672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.136828s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001256s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001958s ]
+
+[ 2018-01-23T22:57:56+08:00 ] ::1 /bookreading/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000961s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002395s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `book` LIMIT 10   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined variable: b E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 330 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025556s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001954s ]
+
+[ 2018-01-23T23:00:08+08:00 ] ::1 /bookreading/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `book` LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+NOTIC: [8] Undefined variable: b E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 330 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029539s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001578s ]
+
+[ 2018-01-23T23:00:23+08:00 ] ::1 /bookreading/index.php/Home/Index/content/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000841s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `charpter` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `book` WHERE `bid` = 2 OR `bname` = '2'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `charpter` WHERE `bid` = 2 OR `bname` = '2'  [ RunTime:0.0069s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '名著'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `comment` WHERE `bid` = 2 OR `bname` = '2'  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001218s ]
+NOTIC: [8] Undefined index: bscore E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\c98d6cc5834e97afa6ab2d2fc316c419.php 第 209 行.
+NOTIC: [8] Undefined index: bscore E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\c98d6cc5834e97afa6ab2d2fc316c419.php 第 217 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001589s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001859s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001866s ]
+
+[ 2018-01-23T23:00:35+08:00 ] ::1 /bookreading/index.php/Home/Index/content/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `charpter` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `book` WHERE `bid` = 2 OR `bname` = '2'  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `charpter` WHERE `bid` = 2 OR `bname` = '2'  [ RunTime:0.0034s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '名著'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `comment` WHERE `bid` = 2 OR `bname` = '2'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+NOTIC: [8] Undefined index: bscore E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\c98d6cc5834e97afa6ab2d2fc316c419.php 第 209 行.
+NOTIC: [8] Undefined index: bscore E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\c98d6cc5834e97afa6ab2d2fc316c419.php 第 217 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001383s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001840s ]
+
+[ 2018-01-23T23:00:38+08:00 ] ::1 /bookreading/index.php/Home/Index/content/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `charpter` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `book` WHERE `bid` = 3 OR `bname` = '3'  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `charpter` WHERE `bid` = 3 OR `bname` = '3'  [ RunTime:0.0026s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '名著'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `comment` WHERE `bid` = 3 OR `bname` = '3'  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000260s ]
+NOTIC: [8] Undefined index: bscore E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\c98d6cc5834e97afa6ab2d2fc316c419.php 第 209 行.
+NOTIC: [8] Undefined index: bscore E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\c98d6cc5834e97afa6ab2d2fc316c419.php 第 217 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028358s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000691s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000953s ]
+
+[ 2018-01-23T23:00:43+08:00 ] ::1 /bookreading/index.php/Home/Index/reading/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+SQL: SHOW COLUMNS FROM `charpter` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `charpter` WHERE `bid` = 3 LIMIT 0,1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033631s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033752s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000892s ]
+
+[ 2018-01-23T23:00:54+08:00 ] ::1 /bookreading/index.php/Home/Index/content/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `charpter` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `book` WHERE `bid` = 1 OR `bname` = '1'  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `charpter` WHERE `bid` = 1 OR `bname` = '1'  [ RunTime:0.0108s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '名著'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `comment` WHERE `bid` = 1 OR `bname` = '1'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+NOTIC: [8] Undefined index: bscore E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\c98d6cc5834e97afa6ab2d2fc316c419.php 第 209 行.
+NOTIC: [8] Undefined index: bscore E:\Environment\wamp\www\bookreading\Application\Runtime\Cache\Home\c98d6cc5834e97afa6ab2d2fc316c419.php 第 217 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025336s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2018-01-23T23:00:55+08:00 ] ::1 /bookreading/index.php/Home/Index/reading/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+SQL: SHOW COLUMNS FROM `charpter` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `charpter` WHERE `bid` = 1 LIMIT 0,1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001247s ]
+
+[ 2018-01-23T23:01:24+08:00 ] ::1 /bookreading/index.php/Home/Index/booklist/id/%E5%90%8D%E8%91%97
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001141s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0035s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `book` WHERE `btype` = '名著' LIMIT 1   [ RunTime:0.0167s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '名著' LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '名著' LIMIT 0,5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000786s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000946s ]
+
+[ 2018-01-23T23:01:29+08:00 ] ::1 /bookreading/index.php/Home/Index/booklist/id/%E6%96%87%E5%AD%A6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `book` WHERE `btype` = '文学' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '文学' LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '文学' LIMIT 0,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000698s ]
+
+[ 2018-01-23T23:01:31+08:00 ] ::1 /bookreading/index.php/Home/Index/booklist/id/%E8%AF%97%E8%AF%8D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `book` WHERE `btype` = '诗词' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '诗词' LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '诗词' LIMIT 0,5   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015990s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000890s ]
+
+[ 2018-01-23T23:01:34+08:00 ] ::1 /bookreading/index.php/Home/Index/booklist/id/%E8%AF%97%E8%AF%8D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0223s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `book` WHERE `btype` = '诗词' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '诗词' LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '诗词' LIMIT 0,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013357s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000694s ]
+
+[ 2018-01-23T23:01:35+08:00 ] ::1 /bookreading/index.php/Home/Index/booklist/id/%E5%84%92%E5%AE%B6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000954s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0038s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `book` WHERE `btype` = '儒家' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '儒家' LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '儒家' LIMIT 0,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000370s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019397s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019567s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000843s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001700s ]
+
+[ 2018-01-23T23:01:38+08:00 ] ::1 /bookreading/index.php/Home/Index/booklist/id/%E9%81%93%E5%AE%B6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `book` WHERE `btype` = '道家' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '道家' LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '道家' LIMIT 0,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016546s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016690s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000872s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001062s ]
+
+[ 2018-01-23T23:01:43+08:00 ] ::1 /bookreading/index.php/Home/Index/introduce/id/%E6%96%87%E5%AD%A6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000432s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021876s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001316s ]
+
+[ 2018-01-23T23:01:46+08:00 ] ::1 /bookreading/index.php/Home/Index/booklist/id/%E5%90%8D%E8%91%97
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+SQL: SHOW COLUMNS FROM `book` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `book` WHERE `btype` = '名著' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '名著' LIMIT 0,5   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `book` WHERE `btype` = '名著' LIMIT 0,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017279s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001274s ]
+
+[ 2018-01-23T23:01:48+08:00 ] ::1 /bookreading/index.php/Home/Index/introduce/id/%E6%96%87%E5%AD%A6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000418s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013204s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013389s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001333s ]
+

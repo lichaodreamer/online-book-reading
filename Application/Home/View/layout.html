@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!-- <link rel="icon" href="ico地址" type="image/x-icon"> -->
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/bookread.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/animate.css">
+</head>
+<body>
+<!-- header -->
+<section id="header">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<p class="headSaying">品国学经典，扬中华文明!</p>
+				</div>
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">未登录</a></li>
+							<li><a href="#">登录</a></li>
+							<li><a href="#">注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</section>
+	
+	<!-- logo -->
+	<section id="logo">
+		<div class="row">
+			<div class="col-md-3 logo"></div>
+			<div class="col-md-4">
+				<div class="input-group">
+		      <input type="text" id="searchtext" class="form-control" placeholder="经典图书">
+		      <span class="input-group-btn">
+		        <a id="search" class="btn btn-default" type="button">搜索</a>
+		      </span>
+		    </div>
+  		</div>
+			<div class="col-md-2">
+				<div class="btn-group pull-right">
+		    	<a href="{:U('Home/Index/person')}/id/mymark" type="button" class="btn btn-default"><span class="glyphicon glyphicon glyphicon-bookmark"></span>&nbsp;我的书签</a>
+		    	<a href="{:U('Home/Index/person')}/id/myshelf" type="button" class="btn btn-default"><span class="glyphicon glyphicon glyphicon-book"></span>&nbsp;我的书架</a>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="code"></div>
+			</div>
+		</div>
+	</section>
+	<!-- 分类导航 -->
+	<section id="classification">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="nav nav-tabs">
+					  <li role="presentation"><a href="{:U('Home/Index/index')}">网站首页</a></li>
+					  <li role="presentation"><a href="{:U('Home/Index/booklist')}/id/名著">名著经典</a></li>
+					  <li role="presentation"><a href="{:U('Home/Index/booklist')}/id/文学">文学经典</a></li>
+					  <li role="presentation"><a href="{:U('Home/Index/booklist')}/id/诗词">诗词经典</a></li>
+					  <li role="presentation"><a href="{:U('Home/Index/booklist')}/id/儒家">儒家哲学</a></li>
+					  <li role="presentation"><a href="{:U('Home/Index/booklist')}/id/道家">道家哲学</a></li>
+					  <li role="presentation" class="pull-right"><a href="{:U('Home/Index/person')}/id/mycenter"><span class="glyphicon glyphicon glyphicon-user"></span>&nbsp;个人中心</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	{__CONTENT__}
+		<section id="footer">
+		<span><a href="{:U('Home/Index/introduce')}/id/readbook">关于读书</a></span>
+		<span><a href="{:U('Home/Index/introduce')}/id/statement">免责声明</a></span>
+		<span><a href="{:U('Home/Index/introduce')}/id/law">相关法律</a></span>
+		<span><a href="{:U('Home/Index/introduce')}/id/contact">联系我们</a></span>
+		<p>Copyright © 古典文学 www.gudian.com 2006-2016, All Rights Reserved. 鄂ICP备15019699号-2</p>
+	</section>
+</body>
+<script type="text/javascript" src="__PUBLIC__/home/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$("#search").click(function(){
+		$myVal=$("#searchtext").val();
+		$shelfurl="{:U('Home/Index/booklist')}/id/"+$myVal; 
+		window.location.replace($shelfurl);
+	});
+	
+
+</script>

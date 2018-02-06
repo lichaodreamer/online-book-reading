@@ -1,0 +1,735 @@
+html,body,h1,h2,h3,h4,h5,h6,p,input,button,div,sub,span,section,ul,li,a{
+	margin: 0px;
+	padding: 0px;
+}
+/*////////////////index页面////////////////////////////////////*/
+body{
+	overflow-x: hidden;
+}
+/*nav ，，，，顶部位置*/
+#header .col-md-4 .headSaying{
+	margin-top: 14px;
+	font-size: 18px;
+	color: #aaa;
+}
+#header .navbar-default .navbar-nav>li>a{
+	transition:0.7s;/*动画执行时间*/
+}
+#header .navbar-default .navbar-nav>li>a:hover{
+	color: rgb(97,171,170);
+	transform:rotate(360deg) scale(1.1);/*缩放1.5倍*/
+}
+/*图标位置，全局的*/
+.glyphicon{
+	top: 3px;
+}
+/*index页面logo处*/
+#logo{
+	margin-top: 60px;
+}
+.col-md-3.logo{
+	height: 50px;
+	margin-left: 95px;
+	margin-top: 5px;
+	background-image: url("../images/logo.png");
+	background-size:contain;
+	background-repeat: no-repeat;
+}
+input.form-control,a.btn.btn-default{
+    margin-top: 15px;
+    border: 1px solid rgb(97,171,170);
+}
+.code{
+	height: 70px;
+	margin-left: 65px;
+	background-image: url('../images/code.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+a.btn.btn-default {
+  padding-left: 10px;
+  color: rgb(97,171,170);
+}
+.col-md-12 {
+	margin-top: 7px;
+  padding: 0;
+}
+/*index页导航。。。。。。。。。。。。。。*/
+#classification .col-md-12 a{
+	font-size: 16px;
+	color: #000;
+	border: 0px;
+	font-weight: bold;
+	background-color: transparent;
+	transition:0.7s;
+}
+#classification .col-md-12 a:hover{
+	background-color: transparent;
+	/*背景色透明*/
+	color: rgb(97,171,170);
+	transform:scale(1.1);
+}
+/*导航li*/
+#classification .nav-tabs>li{
+	padding:0px 25px;
+	margin-bottom: -2px;
+	border-bottom: 2px solid #ddd;
+}
+#classification .nav-tabs>li:hover{
+	border-bottom: 2px solid rgb(97,171,170);
+}
+#classification ul.nav.nav-tabs {
+  border-bottom: 2px solid #ddd;
+}
+
+/*轮播css*/
+#carousel{
+	margin-top: 20px;
+}
+#carousel .col-md-4 a{
+	font-size: 16px;
+	color: #000;
+	border: 0px;
+	background-color: transparent;
+}
+#carousel .nav-tabs>li{
+	padding:0px 10px;
+	margin-bottom: -2px;
+	border-bottom: 2px solid #ddd;
+}
+#carousel .nav-tabs>li:hover{
+	border-bottom: 2px solid rgb(97,171,170);
+}
+#carousel ul.nav.nav-tabs {
+  border:none;
+}
+#carousel .col-md-4 .tab-content{
+	margin: 20px auto;
+}
+#carousel .col-md-4 .tab-content .table td{
+	text-align: center;
+	padding: 9px;
+}
+#carousel .col-md-4 .tab-content .table td:hover{
+	background-color: #eee;
+}
+#carousel .col-md-4 .tab-content .table td a{
+	text-decoration: none;
+	font-size: 12px;
+}
+/*读书咨询*/
+#Consultation .col-md-12>h3,#hotbook .col-md-12>h3{
+	margin-top: 0px;
+	font-size: 20px;
+	font-weight: bold;
+}
+#Consultation .thumbnail a{
+	text-decoration: none;
+}
+#Consultation .thumbnail .caption h3{
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 5px;
+	/*重要是一行显示省略号*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#Consultation .thumbnail .caption p{
+	margin:0px;
+}
+/*热书推荐*/
+#hotbook>.container>.row{
+	margin-left: 0;
+}
+#hotbook .col-md-12 h3 a{
+	text-decoration: none;
+	font-size: 10px;
+	color: #000;
+}
+#hotbook .col-md-12 h3 a:hover{
+	color: red;
+}
+#hotbook .thumbnail a{
+	text-decoration: none;
+}
+#hotbook .thumbnail img{
+	transition:0.7s;
+}
+#hotbook .thumbnail img:hover{
+	box-shadow: 4px 4px 5px #aaa;
+	transform:scale(1.1);
+}
+#hotbook .thumbnail h3{
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	/*重要是一行显示省略号*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#hotbook .col-md-9 .col-md-3{
+	width: 20%;
+	/*max-height: 520px;*/
+}
+/*热书推荐的，右侧折叠面板*/
+#hotbook .list{
+	margin-top: 8px;
+	font-size: 16px;
+	font-weight: bold;
+}
+#hotbook .list-group{
+	margin-top: 15px;
+}
+#hotbook .list-group-item{
+	padding: 8px 15px;
+}
+#hotbook .list-group p{
+	margin:0px;
+	max-width: 125px;
+	max-height: 60px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#hotbook .list-group a{
+	text-decoration: none;
+	color: #000;
+}
+#hotbook .list-group i{
+	color: #aaa;
+	font-style: italic;
+}
+#hotbook .list-group .row .col-md-4 img{
+	width: 100%;
+	height: 100%;
+}
+#hotbook .list-group .row .col-md-7 h4{
+	font-size: 16px;
+	margin-top: 0px;
+	margin-bottom: 3px;
+}
+/*小型轮播*/
+#carSilder .change{
+	position: relative;
+	width: 100%;
+	height: 130px;
+	/*overflow: hidden;*/
+	border: 1px solid #aaa;
+	text-align: center;
+}
+#carSilder .change .scroll{
+	position: relative;
+	width: 98%;
+	height: 100%;
+	margin-left: 1%;
+	overflow: hidden;
+}
+#carSilder .change .scroll .imgList{
+	position: absolute;
+	width: 2300px;
+	height: 130px;
+	animation: auto 25s infinite linear;
+	/*left: -1146px;*/
+}
+/*动画*/
+@keyframes auto
+{
+	0%   {left:0px;}
+	25%  {left:-573px;}
+	50%  {left:-1146px;}
+	75%  {left:-573px;}
+	100% {left:0px;}
+}
+#carSilder .change .scroll .imgList img{
+	width: 171px;
+	height: 110px;
+	margin: 10px 10px;
+	float: left;
+}
+/*footer*/
+#footer{
+	height: 100px;
+	text-align: center;
+	/*margin-top: 40px;*/
+	margin-bottom: 0px;
+	background-color: #f8f8f8;
+}
+#footer span{
+	display: inline-block;
+	margin:20px 20px;
+}
+#footer a{
+	text-decoration: none;
+	color: #000;
+}
+#footer p{
+	display: block;
+	margin-bottom: 5px;
+}
+/*booklist页面id=content部分////////////////////////////////////*/
+#content .col-md-3,#content .col-md-9{
+	margin-top: 20px;
+}
+#content .col-md-9{
+	padding: 0px;
+}
+#content .col-md-9 img{
+	width: 100%;
+	height: 100%;
+}
+#content  .col-md-3 li{
+	background-color: #f9f9f9;
+}
+#content  .col-md-3 a{
+	text-decoration: none;
+	font-weight: bold;
+	color: rgb(97,171,170);
+	padding-left:40px;
+}
+#content .col-md-9 h3{
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(97,171,170);
+	margin: 15px;
+}
+#content .col-md-9 table{
+	border:1px solid #ddd;
+	text-align: center;
+}
+#content .col-md-9 table td a{
+	text-decoration: none;
+	color: #000;
+}
+#content .col-md-9 table th{
+	text-align: center;
+}
+#content .col-md-9 table td p span{
+	text-indent: 40px;
+	color: #aaa;
+}
+#content .col-md-9 table tbody p{
+	/*margin: 50px auto;*/
+	/*border:none;*/
+}
+/*introduce页面部分////////////////////////////////////*/
+#subject .col-md-9 h3,#subject .col-md-9 p{
+	margin:10px 20px;
+}
+#subject .col-md-3 li.active{
+	border: none;
+	background-color: #f0f0f0;;
+}
+/*content页面id=bookbody图书整体页面*/
+#bookbody .row>.row>.col-md-9{
+	position: relative;
+	margin: 0px;
+	padding: 15px 0px;
+	border-top:1px dashed #aaa;
+}
+#bookbody .breadcrumb{
+	background: none;
+}
+#bookbody>.container>.row>.row>.col-md-9>.col-md-4{
+	width: 200px;
+	height: 240px;
+}
+#bookbody>.container>.row>.row>.col-md-9>.col-md-4>a>img{
+	width: 100%;
+	height: 100%;
+}
+#bookbody .col-md-9>.col-md-8>h3{
+	margin: 7px 20px;
+	font-weight: bold;
+}
+#bookbody .col-md-9>.col-md-8>h3>sub{
+	font-size: 16px;
+	color: #888;
+}
+#bookbody .col-md-9>.col-md-8 p{
+	margin-left: 20px;
+	margin-top: 25px;
+}
+
+#bookbody .col-md-9>.mybutton>.btn-default{
+	margin-top: 0px;
+}
+#bookbody .col-md-9>.mybutton{
+	position: absolute;
+	bottom: 15px;
+	left: 235px;
+}
+#bookbody .col-md-9>.mybutton a{
+		margin-right: 20px;
+}
+/*content页面id="bookbody"，图书右侧、、、、、、、、、、、、、、、、、、部分*/
+#bookbody .row>.col-md-3{
+	margin: 15px 0px;
+	padding-left: 30px;
+	border-left: 1px solid #ddd;
+}
+#bookbody .row>.col-md-3 p{
+	margin: 8px 0px;
+}
+#bookbody .row>.col-md-3 p span{
+	font-size: 20px;
+	color: #F7A731;
+}
+#bookbody .row>.col-md-3 p span:nth-child(6){
+	margin-left: 10px;
+	color: red;
+}
+/*content页面图书tab*/
+#bookbody .nav-tabs>li a{
+	font-size: 16px;
+	color: #000;
+	border: 0px;
+	background-color: transparent;
+}
+#bookbody .nav-tabs>li{
+	padding:0px 10px;
+	margin-bottom: -2px;
+	border-bottom: 2px solid #ddd;
+}
+#bookbody .nav-tabs>li:hover{
+	background-color: transparent;
+	border-bottom: 2px solid rgb(97,171,170);
+}
+#bookbody ul.nav.nav-tabs {
+  border-bottom:2px solid #ddd;
+}
+#bookbody .tab-pane h4{
+	margin-top: 15px;
+	border-left: 4px solid #61ABAA;
+	padding-left: 15px;
+}
+#bookbody .tab-pane h4>span>a{
+	text-decoration: none;
+	color: #66CDAA;
+	font-size: 14px;
+}
+#bookbody .tab-pane p{
+	padding:10px 20px; 
+	text-indent: 28px;
+	color: #888;
+}
+#bookbody .tab-pane p span{
+	color: #000;
+	margin-left: 50px;
+}
+#bookbody .tab-pane h5{
+	border-bottom:1px dashed #F5F2EB;
+	/*margin: 10px 0px;*/
+}
+#bookbody .tab-pane h5 a{
+	display: inline-block;
+	margin: 5px 20px;
+	border-left: 4px solid #61ABAA;
+	padding-left: 20px;
+}
+/*其他图书*/
+#bookbody .list{
+	margin-top: 8px;
+	font-size: 16px;
+	font-weight: bold;
+}
+#bookbody .list-group{
+	margin-top: 15px;
+}
+#bookbody .list-group-item{
+	padding: 3px 15px;
+}
+#bookbody .list-group p{
+	margin:0px;
+	max-width: 125px;
+	max-height: 60px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#bookbody .list-group a{
+	text-decoration: none;
+	color: #000;
+}
+#bookbody .list-group i{
+	color: #aaa;
+	font-style: italic;
+}
+#bookbody .list-group .row .col-md-4 img{
+	width: 100%;
+	height: 100%;
+}
+#bookbody .list-group .row .col-md-7 h4{
+	font-size: 16px;
+	margin-top: 0px;
+	margin-bottom: 3px;
+}
+/*去掉其他图书左边框*/
+#bookbody .container .comment .col-md-3{
+	border:none;
+}
+/*评论区开始*/
+#bookbody .container .comment h3{
+	margin-top: 20px;
+	font-size: 18px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #ddd;
+}
+#bookbody .container .comment .row{
+	margin:10px 0px; 
+}
+#bookbody .container .comment .media{
+	border-bottom: 1px dashed #ddd;
+}
+#bookbody .container .comment .media .media-body h4{
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+#bookbody .container .comment .media .media-body p{
+	margin-bottom: 10px;
+}
+/*#bookbody .container .comment .media .media-body p button{
+	color: #aaa;
+	margin-right: 10px;
+	border: none;
+	background-color: transparent;
+}*/
+#bookbody .container .comment .formcomment{
+	margin-top: 50px;
+}
+#bookbody .container .comment .formcomment textarea{
+	width: 100%;
+	height: 100px;
+}
+/*阅读页面---------------------------------------------------------------------*/
+#reading{
+	width: 100%;
+	background-color: #EFE0CB;
+}
+#reading .row .col-md-12{
+	margin-top: 85px;
+	border:1px solid #E2CFAB;
+	background-color: #FCF5ED;
+}
+#reading .row .col-md-12 h5 p{
+	padding: 20px;
+	font-size: 24px;
+	display: inline-block;
+	font-weight: bold;
+}
+#reading .row .col-md-12 h5 a{
+	color: #61ABAA;
+	border-color: #61ABAA;
+	background-color: #FCF5ED;
+	margin-top: 0px;
+}
+#reading .row .col-md-12 h5 a:hover{
+	color: #fff;
+	background-color: #61ABAA;
+}
+#reading .row .col-md-12 h5>.btn-group{
+	padding: 20px;
+	background: transparent; /*完全透明*/
+	opacity: 0.1;
+	margin-right: 30px;
+}
+#reading .row .col-md-12 h5>.btn-group:hover{
+	opacity: 1;
+}
+#reading .row .col-md-12 h5 a span.glyphicon{
+	top: 2px;
+}
+#reading .row .col-md-12 h5 .dropdown-menu{
+	padding: 0px;
+}
+#reading .row .col-md-12 h5 .dropdown-menu span{
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	border-radius:50%;
+}
+#reading .row .col-md-12 h5 .dropdown-menu li:nth-child(1) span{
+	background-color: #EFE0CB;
+}
+#reading .row .col-md-12 h5 .dropdown-menu li:nth-child(2) span{
+	background-color: #EFEFEF;
+}
+#reading .row .col-md-12 h5 .dropdown-menu li:nth-child(3) span{
+	background-color: #D2E6FA;
+}
+#reading .row .col-md-12 h5 .dropdown-menu li:nth-child(4) span{
+	background-color: #D2EFC3;
+}
+#reading .row .col-md-12 h5 .dropdown-menu li:nth-child(5) span{
+	background-color: #9A9A9A;
+}
+#reading .row .col-md-12 .readtitle p{
+	font-size: 16px;
+	color: #999;
+	padding-left: 20px;
+}
+#reading .row .col-md-12 .readtitle h3,#reading .row .col-md-12 .readtitle h5{
+	margin-top: 10px;
+	text-align: center;
+}
+#reading .row .col-md-12 .readbody{
+	margin: 10px  auto;
+	width: 93%;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+#reading .row .col-md-12 .readbody pre{
+	white-space: pre-wrap;
+	text-indent: 40px;
+	font-size: 16px;
+	line-height: 38px;
+	background-color: #FCF5ED;
+	border: none;
+}
+#reading .row .col-md-12 .jump p{
+	text-align: center;
+	margin: 30px;
+}
+#reading .row .col-md-12 .jump a{
+	border-radius: 0%;
+	color: #000;
+	border: 1px solid #ddd;
+	margin-top: 0px;
+}
+#reading .row .col-md-12 .jump a:nth-child(2){
+	margin: 0px 20px;
+}
+#reading .row .col-md-12 .jump a:hover{
+	color: #D47E74;
+}
+#share_button{
+	position: fixed;
+}
+/*reading页面模态框*/
+.modalFrame{
+	position: fixed;
+	top: 30%;
+	left: 45%;
+	height: 35px;
+	color: #fff;
+	padding:5px 10px;
+	line-height: 25px;
+	border-radius: 5%;
+	background-color: rgba(124,124,124,0.8);
+	display: none;
+}
+/*小书签页标*/
+#reading .row .col-md-12 h5 #markicon{	
+    position: absolute;
+    font-size: 28px;
+    top: 1px;
+    right: 10px;
+}
+/*/person页面个人中心//////////////////////////////////////////////////////////*/
+#center{
+	margin: 20px 0px;
+}
+#center .col-md-1{
+	width: 50px;
+}
+#center .col-md-2{
+	margin:0px 20px; 
+	padding: 0px;
+}
+#center .col-md-2 a{
+	text-decoration: none;
+	color: #aaa;
+	letter-spacing:3px;
+}
+#center .col-md-2 a:hover{
+	cursor:pointer;
+}
+#center .col-md-2 .leftlist .listitem{
+	list-style: none;
+	width: 100%;
+	height: 43px;
+	border: 2px solid #ddd;
+	margin-top: -2px;
+	line-height: 40px;
+	padding-left: 35px;
+}
+#center .col-md-2 .leftlist .active{
+	background-color: #eee;
+}
+#center .col-md-2 .leftlist .active a{
+	color: #61ABAA;
+	font-weight: bold;
+	font-size: 15px;
+}
+/*/person页面个人资料///////*/
+#center .col-md-9 .myself .row{
+	border:2px solid #ddd;
+	margin: 7px 0px;
+}
+#center .col-md-9 .myself .row .col-md-2{
+	padding:30px 0px;
+	margin:0px;
+	text-align: center;
+} 
+#center .col-md-9 .myself .row .col-md-10{
+	padding-top: 30px;
+	padding-left: 0px;
+}
+#center .col-md-9 .myself .col-md-10 p{
+	color: #aaa;
+}
+#center .col-md-9 .myself .col-md-10 p span{
+	color: #000;
+	font-weight: bold;
+	font-size: 14px;
+}
+#center .col-md-9 .person .centerTitle{
+	color: #61ABAA;
+	font-weight: bold;
+	font-size: 16px;
+}
+#center .col-md-9 .person table{
+	margin-bottom: 0px;
+}
+#center .col-md-9 .person table thead,#center .col-md-9 .person table tbody{
+	border: 2px solid #ddd;
+}
+#center .col-md-9 .person table th{
+	padding:0px 30px;
+	line-height: 45px;
+}
+#center .col-md-9 .person table td{
+	padding-left: 30px;
+}
+/*标签操作，仿后台*/
+#center .col-md-9 .person table ul li{
+	list-style: none;
+	float: left;
+}
+/*分页。。。。。。。。。。。。。。*/
+.mypage{
+  text-align: center;
+  margin: 10px;
+}
+.mypage .current{
+	margin: 0px 5px;
+	border-radius: 20%;
+	padding: 3px 10px;
+	background-color: #50A8E6;
+}
+.mypage .num{
+	margin: 0px 5px;
+	border: 1px solid #ddd;
+	border-radius: 20%;
+	padding: 3px 10px;
+}
+.mypage .next,.mypage .prev{
+	margin: 0px 5px;
+	border: 1px solid #ddd;
+	border-radius: 5%;
+	padding: 3px 10px;
+}
+.mypage .rows{
+	color: #50A8E6;
+}

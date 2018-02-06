@@ -1,0 +1,214 @@
+<layout name="layout" />
+<title>图书详情</title>
+	<section id="bookbody">
+		<div class="container">
+			<div class="row">
+				<ul class="breadcrumb">  
+					<volist name="book" id="b">
+	         <li><a href="{:U('Home/Index/booklist')}/id/{$b.btype}">{$b.btype}</a></li>
+	         	<li class="active">{$b.bname}</li>
+	         </volist>   
+	      </ul>
+				<div class="row">
+					<div class="col-md-9"> 
+		        <div class="col-md-4">
+		        	<a href="{:U('Home/Index/reading')}/id/{$b.bid}"><img src="__PUBLIC__/home/images/bookPhoto/{$b.bphoto}.jpg"></a>
+		        </div>  
+		        <div class="col-md-8">
+		        	<volist name="book" id="b" offset="0" length='1'>
+			        	<h3>{$b.bname}&nbsp;&nbsp;
+			        		<sub> {$b.bauthor}&nbsp;&nbsp;著</sub> 
+			        	</h3>
+				        <p>&nbsp;&nbsp;&nbsp;&nbsp;{$b.bintroduction|msubstr=0,230,'utf-8'}</p>
+		        	</volist>
+		       	</div>
+		       	<div class="mybutton">
+			        <a href="{:U('Home/Index/reading')}/id/{$b.bid}" class="btn btn-danger" type="button">立即阅读</a>
+			        <a id="addshelf" class="btn btn-default" type="button">加入书架</a>
+			        <a href="__PUBLIC__/books/{$b.bname}.txt" download="{$b.bname}" class="btn btn-default" type="button">图书下载</a>
+			       </div>  
+					</div>
+					<div class="col-md-3">
+						<p id="bookscore"></p>
+						<p>字数：{$b.bnumword}万</p>
+						<p>分类：<a href="{:U('Home/Index/booklist')}/id/{$b.btype}">{$b.btype}</a></p>
+						<p>出版社：{$b.bpress}</p>
+						<p>出版时间：{$b.btime}</p>
+					</div>
+				</div>
+				<div class="row comment">
+						<div class="col-md-9">
+							<ul id="myTab" class="nav nav-tabs">
+						    <li style="border-bottom: 2px solid rgb(97,171,170);"><a href="#home" style="color: rgb(97,171,170);" data-toggle="tab">简介</a>
+						    </li>
+						    <li><a href="#class" data-toggle="tab">目录</a></li>
+						    <li><a href="#ios" data-toggle="tab">详情</a></li>
+							</ul>
+							<div id="myTabContent" class="tab-content">
+							    <div class="tab-pane fade in active" id="home">
+							      <h4>图书简介</h4>
+							      <p>{$b.bintroduction}</p>
+							    </div>
+							    <div class="tab-pane fade" id="class">
+							       <h4>图书目录<span class="pull-right"><a href="" data-toggle="tab">展开</a></span></h4>
+							       <volist name="char" id="c">
+							       	<h5><a href="">第{$c.cid}章&nbsp;{$c.cname}</a></h5>
+							       </volist>
+							    </div>
+							    <div class="tab-pane fade" id="ios">
+							       <h4>图书详情</h4>
+							       <p>作者<span>{$b.bauthor}</span></p>
+							       <p>类别<span>{$b.btype}</span></p>
+							       <p>字数<span>{$b.bnumword}万</span></p>
+							       <p>出版社<span>{$b.bpress}</span></p>
+							       <p>出版时间<span>{$b.btime}</span></p>
+							    </div>
+							</div>
+							<!-- 评论区 -->
+							<h3>评论</h3>
+							<div class="row">
+								<volist name="comment" id="c">
+									<div class="media">
+									  <div class="media-left">
+									    <img class="media-object img-circle" src="__PUBLIC__/home/images/userPhoto/user.png">
+									  </div>
+									  <div class="media-body">
+									    <h4 class="media-heading">{$c.nickname}</h4>
+									    <p>{$c.comment}</p>
+									    <p class="pull-right">{$c.ctime}发表
+									  </div>
+									</div>
+								</volist>
+							</div>
+							
+							<div class="formcomment">
+								<h3>发表评论</h3>
+								<p>欢迎评论本书！！！</p>
+								<div>
+									<!-- <form> -->
+										<textarea placeholder="请输入评论内容"></textarea>
+										<button class="btn btn-danger pull-right">发表</button>
+									<!-- </form> -->
+								</div>
+							</div>
+							
+						</div>
+					<div class="col-md-3">
+						<h3 class="list">其他图书</h3>
+						<ul class="list-group">
+							<foreach name="books" item="bs">
+									<if  condition="$bs.bid eq 1">
+										<li class="list-group-item">
+											<p style="display: none;"><a href=""><i>{$key+1}</i>&nbsp;&nbsp;{$bs.bname}</a>
+											</p>
+											<div class="row" style="display: block;">
+												<div class="col-md-4">
+													<img src="__PUBLIC__/home/images/bookPhoto/{$bs.bphoto}.jpg">
+												</div>
+												<div class="col-md-7">
+													<a href="{:U('Home/Index/content')}/id/{$bs.bid}">
+														<h4>作者：{$bs.bauthor}</h4>
+														<p>{$bs.bintroduction}</p>
+													</a>
+												</div>
+											</div>
+										</li>
+										<else />
+										<li class="list-group-item">
+									<p style="display: block;"><a href=""><i>{$key+1}</i>&nbsp;&nbsp;{$bs.bname}</a>
+									</p>
+									<div class="row" style="display: none;">
+										<div class="col-md-4">
+											<img src="__PUBLIC__/home/images/bookPhoto/{$bs.bphoto}.jpg">
+										</div>
+										<div class="col-md-7">
+											<a href="{:U('Home/Index/content')}/id/{$bs.bid}">
+												<h4>作者：{$bs.bauthor}</h4>
+												<p>{$bs.bintroduction}</p>
+											</a>
+										</div>
+									</div>
+								</li>
+									</if>
+								</foreach>
+					
+							</ul>
+					</div>
+				</div>
+<div class="modalFrame"></div>
+			</div>
+		</div>
+	</section>
+<script type="text/javascript" src="__PUBLIC__/home/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/wow.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/myslider.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var m={$b.bscore};
+		for(var i=1;i<=5;i++){
+			if(i<=m){
+				$("#bookscore").append("<span 	class='glyphicon glyphicon-star'></span>");	
+			}else{
+				$("#bookscore").append("<span class='glyphicon glyphicon-star-empty'></span>");
+			}
+		};
+		$("#bookscore").append("<span>{$b.bscore}.0</span>");
+		$bookname=String("{$b.bname}");
+		$bookauthor=String("{$b.bauthor}");
+		$booktype=String("{$b.btype}");
+		// 添加书架
+		$("#addshelf").click(function(){
+			$shelfurl="{:U('Home/Index/addshelf')}"; 
+		  	$data={
+		  		"bid":{$b.bid},
+		  		"bname":$bookname,
+		  		"bauthor":$bookauthor,
+		  		"btype":$booktype
+		  	};
+		  	$.post($shelfurl,$data,function(msg){
+		    	if(msg==0){
+		    		$(".modalFrame").html("亲，已经添加书架咯！！！").show().delay(1500).fadeOut();
+		    	}else{
+		    		$(".modalFrame").html("亲，成功添加书架咯！！！").show().delay(1500).fadeOut();
+		    	}
+		    },'json');
+		})
+		// 评论发表
+		$(".formcomment button").click(function(){
+			$comment=$(".formcomment textarea").val();
+			if($comment.length<10){
+				$(".modalFrame").html("亲，评论内容不能少于十个字哦！！！").show().delay(1500).fadeOut();
+				$(".formcomment textarea").attr("placeholder","请重新输入评论");
+			}else if($comment.length>100){
+				$(".modalFrame").html("亲，评论内容不能多余一百个字哦！！！").show().delay(1500).fadeOut();
+				$(".formcomment textarea").attr("placeholder","请重新输入评论");
+			}else{
+				$commenturl="{:U('Home/Index/addcomment')}"; 
+			  	$data={
+			  		"bid":{$b.bid},
+			  		"bname":$bookname,
+			  		"bauthor":$bookauthor,
+			  		"btype":$booktype,
+			  		"comment":$comment
+			  	};
+			  	$.post($commenturl,$data,function(msg){
+			    	if(msg[0]==0){
+			    		$(".modalFrame").html("亲，不能连续评论哦！！！").show().delay(1500).fadeOut();
+			    	}else{
+			    		$(".modalFrame").html("亲，评论成功咯！！！").show().delay(1500).fadeOut();
+			    		$("#bookbody .container .comment .row").append("<div class='media'><div class='media-left'><img class='media-object img-circle' src='__PUBLIC__/home/images/userPhoto/user.png'></div><div class='media-body'><h4 class='media-heading'>"+msg[1]['nickname']+"</h4><p>"+msg[1]['comment']+"</p><p class='pull-right'>"+msg[1]['ctime']+"发表</div></div>");
+			    		// $("#bookbody .container .comment .row").removeClass("row").addClass("row");
+			    		
+
+			    	}
+			    	
+			    },'json');
+			}	
+
+		})
+
+		// console.log($comment);
+	});
+</script>
+</html>

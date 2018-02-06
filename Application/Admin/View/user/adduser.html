@@ -1,0 +1,78 @@
+<layout name="layout" />
+    <!--/sidebar-->
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Admin/index/index')}">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="{:U('Admin/user/alluser')}">账号管理</a><span class="crumb-step">&gt;</span><span>新增账号</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:U('Admin/user/newuser')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody><tr>
+                            <th width="120"><i class="require-red">*</i>身份：</th>
+                            <td>
+                                <select name="colId" id="catid" class="required">
+                                    <option value="0">用户</option>
+                                    <option value="1">管理员</option>
+                                </select>
+                            </td>
+                        </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>昵称：</th>
+                                <td>
+                                    <input class="common-text required" id="nickname" name="nickname" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>账号：</th>
+                                <td>
+                                    <input class="common-text required" id="username" name="username" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>密码：</th>
+                                <td>
+                                    <input class="common-text required" id="password" name="password" size="50" value="" type="password">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>确认密码：</th>
+                                <td>
+                                    <input class="common-text required" id="passwords" name="passwords" size="50" value="" type="password">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>性别：</th>
+                                <td>
+                                    <input class="common-text required" id="sex" name="sex" size="50" value="男" type="sex">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>电话：</th>
+                                <td>
+                                    <input class="common-text required" id="tel" name="tel" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>邮箱：</th>
+                                <td>
+                                    <input class="common-text required" id="email" name="email" size="50" value="" type="email">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>
