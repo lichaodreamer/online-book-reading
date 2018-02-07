@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/main.css"/>
     <script type="text/javascript" src="__PUBLIC__/admin/js/libs/modernizr.min.js"></script>
+    <!-- <script type="text/javascript" src="__PUBLIC__/admin/js/libs/jquery-3.2.1.min.js"></script> -->
 </head>
 <body>
 <div class="topbar-wrap white">
@@ -32,25 +33,37 @@
         <div class="sidebar-content">
             <ul class="sidebar-list">
                 <li>
-                    <a href="{:U('Admin/user/alluser')}"><i class="icon-font">&#xe018;</i>账号管理</a>
+                    <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>账号管理</a>
                     <ul class="sub-menu">
                         <li><a href="{:U('Admin/user/alluser')}"><i class="icon-font">&#xe005;</i>账号列表</a></li>
                         <li><a href="adduser.html"><i class="icon-font">&#xe026;</i>账号添加</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="allcomment.html"><i class="icon-font">&#xe018;</i>评论管理</a>
+                    <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书籍管理</a>
                     <ul class="sub-menu">
-                        <li><a href="allcomment.html"><i class="icon-font">&#xe00b;</i>评论列表<li><a href="addcomment.html"><i class="icon-font">&#xe002;</i>评论编辑</a></li>
+                        <li><a href="{:U('Admin/books/allbook')}"><i class="icon-font">&#xe006;</i>书籍列表</a></li>
+                        <li><a href="addbook.html"><i class="icon-font">&#xe002;</i>书籍添加</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="allbook.html"><i class="icon-font">&#xe018;</i>书籍管理</a>
+                    <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>信息管理</a>
                     <ul class="sub-menu">
-                        <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书籍列表<li><a href="addbook.html"><i class="icon-font">&#xe002;</i>书籍编辑</a></li>
+                        <li><a href="allbook.html"><i class="icon-font">&#xe051;</i>书签列表</a></li>
+                        <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书架列表</a></li>
+                         <li><a href="{:U('Admin/comment/allcomment')}"><i class="icon-font">&#xe00b;</i>评论列表</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
     {__CONTENT__}
+<!-- <script type="text/javascript">
+    $(document).ready(function(){
+        $(".sidebar-list li a").click(function(){
+            $i=$(this).parent().index();
+            $(".sidebar-list li ul").hide()
+            $(".sidebar-list li ul").eq($i).css("display","block");
+        });      
+    })
+</script> -->

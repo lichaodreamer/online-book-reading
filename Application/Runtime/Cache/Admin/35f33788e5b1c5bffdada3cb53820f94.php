@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/bookreading/Public/admin/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/bookreading/Public/admin/css/main.css"/>
     <script type="text/javascript" src="/bookreading/Public/admin/js/libs/modernizr.min.js"></script>
-    <script type="text/javascript" src="/bookreading/Public/admin/js/libs/jquery-3.2.1.min.js"></script>
+    <!-- <script type="text/javascript" src="/bookreading/Public/admin/js/libs/jquery-3.2.1.min.js"></script> -->
 </head>
 <body>
 <div class="topbar-wrap white">
@@ -33,36 +33,25 @@
         <div class="sidebar-content">
             <ul class="sidebar-list">
                 <li>
-                    <a class="item-group" href="javascript:void(0);"><i class="icon-font">&#xe018;</i>账号管理</a>
-                    <ul class="sub-menu" style="display: block;">
+                    <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>账号管理</a>
+                    <ul class="sub-menu">
                         <li><a href="<?php echo U('Admin/user/alluser');?>"><i class="icon-font">&#xe005;</i>账号列表</a></li>
                         <li><a href="adduser.html"><i class="icon-font">&#xe026;</i>账号添加</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a class="item-group" href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书签管理</a>
-                    <ul class="sub-menu" style="display: none;">
-                        <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书签列表</a></li>
-                        <li><a href="addbook.html"><i class="icon-font">&#xe002;</i>书签编辑</a></li>
+                    <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书籍管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="<?php echo U('Admin/books/allbook');?>"><i class="icon-font">&#xe006;</i>书籍列表</a></li>
+                        <li><a href="addbook.html"><i class="icon-font">&#xe002;</i>书籍添加</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a class="item-group" href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书架管理</a>
-                    <ul class="sub-menu" style="display: none;">
-                        <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书架列表<li><a href="addbook.html"><i class="icon-font">&#xe002;</i>书架编辑</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="item-group" href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书籍管理</a>
-                    <ul class="sub-menu" style="display: none;">
-                        <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书籍列表</a></li>
-                        <li><a href="addbook.html"><i class="icon-font">&#xe002;</i>书籍编辑</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="item-group" href="javascript:void(0);"><i class="icon-font">&#xe018;</i>评论管理</a>
-                    <ul class="sub-menu" style="display: none;">
-                        <li><a href="<?php echo U('Admin/comment/allcomment');?>"><i class="icon-font">&#xe00b;</i>评论列表</a></li>
+                    <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>信息管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="allbook.html"><i class="icon-font">&#xe051;</i>书签列表</a></li>
+                        <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书架列表</a></li>
+                         <li><a href="<?php echo U('Admin/comment/allcomment');?>"><i class="icon-font">&#xe00b;</i>评论列表</a></li>
                     </ul>
                 </li>
             </ul>
@@ -71,19 +60,19 @@
     
     <!--/sidebar-->
     <div class="main-wrap">
+
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Admin/index/index');?>">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="<?php echo U('Admin/user/alluser');?>">账号管理</a><span class="crumb-step">&gt;</span><span>新增账号</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="allRooms.html">书籍管理</a><span class="crumb-step">&gt;</span><span>新增书籍</span></div>
         </div>
         <div class="result-wrap">
             <div class="result-content">
-                <form action="<?php echo U('Admin/user/newuser');?>" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                <form action="/jscss/admin/design/add" method="post" id="myform" name="myform" enctype="multipart/form-data">
                     <table class="insert-tab" width="100%">
                         <tbody><tr>
                             <th width="120"><i class="require-red">*</i>身份：</th>
                             <td>
                                 <select name="colId" id="catid" class="required">
-                                    <option value="0">用户</option>
-                                    <option value="1">管理员</option>
+                                    <option value="19">用户</option><option value="20">管理员</option>
                                 </select>
                             </td>
                         </tr>
@@ -100,33 +89,27 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><i class="require-red">*</i>密码：</th>
+                                <th><i class="require-red">*</i>书名：</th>
                                 <td>
-                                    <input class="common-text required" id="password" name="password" size="50" value="" type="password">
+                                    <input class="common-text required" id="bookname" name="bookname" size="50" value="" type="password">
                                 </td>
                             </tr>
                             <tr>
-                                <th><i class="require-red">*</i>确认密码：</th>
+                                <th><i class="require-red">*</i>简介：</th>
                                 <td>
-                                    <input class="common-text required" id="passwords" name="passwords" size="50" value="" type="password">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><i class="require-red">*</i>性别：</th>
-                                <td>
-                                    <input class="common-text required" id="sex" name="sex" size="50" value="男" type="sex">
+                                    <input class="common-text required" id="bookauthor" name="bookauthor" size="50" value="" type="text">
                                 </td>
                             </tr>
                             <tr>
                                 <th>电话：</th>
                                 <td>
-                                    <input class="common-text required" id="tel" name="tel" size="50" value="" type="text">
+                                    <input class="common-text required" id="title" name="title" size="50" value="" type="text">
                                 </td>
                             </tr>
                             <tr>
                                 <th>邮箱：</th>
                                 <td>
-                                    <input class="common-text required" id="email" name="email" size="50" value="" type="email">
+                                    <input class="common-text required" id="title" name="title" size="50" value="" type="email">
                                 </td>
                             </tr>
                             <tr>
@@ -146,7 +129,7 @@
 </div>
 </body>
 </html>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function(){
         $(".sidebar-list li a").click(function(){
             $i=$(this).parent().index();
@@ -154,4 +137,4 @@
             $(".sidebar-list li ul").eq($i).css("display","block");
         });      
     })
-</script>
+</script> -->

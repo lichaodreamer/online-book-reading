@@ -1,0 +1,47 @@
+<layout name="layout" />
+    <!--/sidebar-->
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">评论管理</span></div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="{:U('Admin/comment/addcomment')}"><i class="icon-font"></i>新增评论</a>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>昵称</th>
+                            <th>账号</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>内容</th>
+                            <th>操作</th>
+                        </tr>
+                        <volist name="comment" id="c">
+                        <tr>
+                            <td>{$c.nickname}</td>
+                            <td>{$c.username}</td>
+                            <td>{$c.bname}</td>
+                            <td>{$c.bauthor}</td>
+                            <td>{$c.comment}</td>
+                            <td>
+                                <a class="link-update" href="addcomment.html">修改</a>
+                                <a class="link-del" href="#">删除</a>
+                            </td>
+                        </tr>
+                       </volist>
+                    </table>
+                    <div class="list-page">{$page}</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

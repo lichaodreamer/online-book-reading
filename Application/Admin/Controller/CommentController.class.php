@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class UserController extends Controller {
+class CommentController extends Controller {
 	public function __construct(){
 		parent::__construct();
 		if(!isLogin())
@@ -10,15 +10,15 @@ class UserController extends Controller {
             echo "<script> alert('请先登录！');parent.location.href='$url'; </script>";
 		}
 	}
-    public function alluser()
+    public function allcomment()
     {
-        $userModel=M("user");
-        $count=$userModel->count();//总数
+        $commentModel=M("comment");
+        $count=$commentModel->count();//总数
         $page=new \Think\Page($count,5);
         $show=$page->show();             
-        $user = $userModel->limit($page->firstRow, $page->listRows)->select();
+        $comment=$commentModel->limit($page->firstRow, $page->listRows)->select();
         $this->assign('page',$show);
-        $this->assign('user',$user);
+        $this->assign('comment',$comment);
     	$this->display();
     }
     public function newuser()

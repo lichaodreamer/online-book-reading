@@ -34,33 +34,33 @@
             <ul class="sidebar-list">
                 <li>
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>账号管理</a>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" style="display: block;">
                         <li><a href="<?php echo U('Admin/user/alluser');?>"><i class="icon-font">&#xe005;</i>账号列表</a></li>
                         <li><a href="adduser.html"><i class="icon-font">&#xe026;</i>账号添加</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书签管理</a>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" style="display: none;">
                         <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书签列表</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书架管理</a>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" style="display: none;">
                         <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书架列表</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书籍管理</a>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" style="display: none;">
                         <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书籍列表</a></li>
                         <li><a href="addbook.html"><i class="icon-font">&#xe002;</i>书籍添加</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>评论管理</a>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" style="display: none;">
                         <li><a href="<?php echo U('Admin/comment/allcomment');?>"><i class="icon-font">&#xe00b;</i>评论列表</a></li>
                     </ul>
                 </li>
@@ -70,67 +70,43 @@
     
     <!--/sidebar-->
     <div class="main-wrap">
+
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font">&#xe06b;</i><span>欢迎进入国学经典在线阅读管理后台</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">评论管理</span></div>
         </div>
         <div class="result-wrap">
-            <div class="result-title">
-                <h1>快捷操作</h1>
-            </div>
-            <div class="result-content">
-                <div class="short-wrap">
-                    <a href="<?php echo U('Admin/user/alluser');?>"><i class="icon-font">&#xe001;</i>所有账号</a>
-                    <a href="<?php echo U('Admin/user/alluser');?>"><i class="icon-font">&#xe048;</i>所有评论</a>
-                    <a href="<?php echo U('Admin/user/alluser');?>"><i class="icon-font">&#xe001;</i>所有书籍</a>
+            <form name="myform" id="myform" method="post">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="<?php echo U('Admin/comment/addcomment');?>"><i class="icon-font"></i>新增评论</a>
+                    </div>
                 </div>
-            </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>昵称</th>
+                            <th>账号</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>内容</th>
+                            <th>操作</th>
+                        </tr>
+                        <?php if(is_array($comment)): $i = 0; $__LIST__ = $comment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$c): $mod = ($i % 2 );++$i;?><tr>
+                            <td><?php echo ($c["nickname"]); ?></td>
+                            <td><?php echo ($c["username"]); ?></td>
+                            <td><?php echo ($c["bname"]); ?></td>
+                            <td><?php echo ($c["bauthor"]); ?></td>
+                            <td><?php echo ($c["comment"]); ?></td>
+                            <td>
+                                <a class="link-update" href="addcomment.html">修改</a>
+                                <a class="link-del" href="#">删除</a>
+                            </td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </table>
+                    <div class="list-page"><?php echo ($page); ?></div>
+                </div>
+            </form>
         </div>
-        <div class="result-wrap">
-            <div class="result-title">
-                <h1>系统状况</h1>
-            </div>
-            <div class="result-content">
-                <ul class="sys-info-list">
-                    <li>
-                        <label class="res-lab">账号总数</label><span class="res-info"><?php echo ($info['usercount']); ?></span>
-                    </li>
-                    <li>
-                        <label class="res-lab">评论总数</label><span class="res-info"><?php echo ($info['commentcount']); ?></span>
-                    </li>
-                    <li>
-                        <label class="res-lab">书籍总数</label><span class="res-info"><?php echo ($info['bookcount']); ?></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="result-wrap">
-            <div class="result-title">
-                <h1>系统基本信息</h1>
-            </div>
-            <div class="result-content">
-                <ul class="sys-info-list">
-                    <li>
-                        <label class="res-lab">操作系统</label><span class="res-info"><?php echo ($info['操作系统']); ?></span>
-                    </li>
-                    <li>
-                        <label class="res-lab">运行环境</label><span class="res-info"><?php echo ($info['运行环境']); ?></span>
-                    </li>
-                    <li>
-                        <label class="res-lab">上传附件限制</label><span class="res-info"><?php echo ($info['上传附件限制']); ?></span>
-                    </li>
-                    <li>
-                        <label class="res-lab">北京时间</label><span class="res-info"><?php echo ($info['北京时间']); ?></span>
-                    </li>
-                    <li>
-                        <label class="res-lab">服务器域名/IP</label><span class="res-info"><?php echo ($info['服务器域名/IP']); ?></span>
-                    </li>
-                    <li>
-                        <label class="res-lab">Host</label><span class="res-info"><?php echo ($info['host']); ?></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
     </div>
     <!--/main-->
 </div>

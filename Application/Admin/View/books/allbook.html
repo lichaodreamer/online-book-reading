@@ -1,0 +1,48 @@
+<layout name="layout" />
+    <!--/sidebar-->
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">图书管理</span></div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="addbook.html"><i class="icon-font"></i>新增图书</a>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>类型</th>
+                            <th>简介</th>
+                            <th>出版社</th>
+                            <th>操作</th>
+                        </tr>
+                        <volist name="book" id="b">
+                        <tr>
+                            <td title="509"><a target="_blank" href="#" title="509">{$b.bname}</a> 
+                            </td>
+                            <td>{$b.bauthor}</td>
+                            <td>{$b.btype}</td>
+                            <td>{$b.bintroduction|msubstr=0,30,'utf-8'}</td>
+                            <td>{$b.bpress}</td>
+                            <td>
+                                <a class="link-update" href="addbook.html">修改</a>
+                                <a class="link-del" href="#">删除</a>
+                            </td>
+                        </tr>
+                        </volist>
+                    </table>
+                    <div class="list-page"> 2 条 1/1 页</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

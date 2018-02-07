@@ -1,0 +1,43 @@
+<layout name="layout" />
+    <!--/sidebar-->
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Admin/index/index')}">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">账号管理</span></div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>昵称</th>
+                            <th>账号</th>
+                            <th>电话</th>
+                            <th>email</th>
+                            <th>身份</th>
+                            <th>性别</th>
+                            <th>操作</th>
+                        </tr>
+                        <volist name="user" id="u">
+                        <tr>
+                            <td>{$u.nickname}</td>
+                            <td>{$u.username}</td>
+                            <td>{$u.tel}</td>
+                            <td>{$u.email}</td>
+                            <td>{$u.identity}</td>
+                            <td>{$u.usex}</td>
+                            <td>
+                                <a class="link-update" href="">修改</a>
+                                <a class="link-del" href="#">删除</a>
+                            </td>
+                        </tr>
+                        </volist>
+                    </table>
+                    <div class="list-page">{$page}</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

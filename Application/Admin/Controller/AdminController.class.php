@@ -14,10 +14,10 @@ class AdminController extends Controller{
             $result = $userModel->where($data)->count();
             if ($result > 0) {
                 session("username", I("username"));
-                $this->success("登录成功！", U("Admin/index/index"));
+                $this->redirect('Admin/index/index');
             }
             else {
-                $this->error("用户名或密码不正确");
+                $this->redirect('Admin/admin/login');
             }
         }
         else {

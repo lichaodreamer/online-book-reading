@@ -60,41 +60,41 @@
     
     <!--/sidebar-->
     <div class="main-wrap">
+
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Admin/index/index');?>">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">账号管理</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">图书管理</span></div>
         </div>
         <div class="result-wrap">
             <form name="myform" id="myform" method="post">
                 <div class="result-title">
                     <div class="result-list">
-                        <a href="<?php echo U('Admin/user/adduser');?>"><i class="icon-font"></i>新增账号</a>
+                        <a href="addbook.html"><i class="icon-font"></i>新增图书</a>
                     </div>
                 </div>
                 <div class="result-content">
                     <table class="result-tab" width="100%">
                         <tr>
-                            <th>昵称</th>
-                            <th>账号</th>
-                            <th>电话</th>
-                            <th>email</th>
-                            <th>身份</th>
-                            <th>性别</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>类型</th>
+                            <th>简介</th>
+                            <th>出版社</th>
                             <th>操作</th>
                         </tr>
-                        <?php if(is_array($user)): $i = 0; $__LIST__ = $user;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$u): $mod = ($i % 2 );++$i;?><tr>
-                            <td><?php echo ($u["nickname"]); ?></td>
-                            <td><?php echo ($u["username"]); ?></td>
-                            <td><?php echo ($u["tel"]); ?></td>
-                            <td><?php echo ($u["email"]); ?></td>
-                            <td><?php echo ($u["identity"]); ?></td>
-                            <td><?php echo ($u["usex"]); ?></td>
+                        <?php if(is_array($book)): $i = 0; $__LIST__ = $book;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$b): $mod = ($i % 2 );++$i;?><tr>
+                            <td title="509"><a target="_blank" href="#" title="509"><?php echo ($b["bname"]); ?></a> 
+                            </td>
+                            <td><?php echo ($b["bauthor"]); ?></td>
+                            <td><?php echo ($b["btype"]); ?></td>
+                            <td><?php echo (msubstr($b["bintroduction"],0,30,'utf-8')); ?></td>
+                            <td><?php echo ($b["bpress"]); ?></td>
                             <td>
-                                <a class="link-update" href="">修改</a>
+                                <a class="link-update" href="addbook.html">修改</a>
                                 <a class="link-del" href="#">删除</a>
                             </td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
-                    <div class="list-page"><?php echo ($page); ?></div>
+                    <div class="list-page"> 2 条 1/1 页</div>
                 </div>
             </form>
         </div>
