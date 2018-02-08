@@ -3,7 +3,7 @@
     <div class="main-wrap">
 
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">图书管理</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Admin/index/index')}">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">图书管理</span></div>
         </div>
         <div class="result-wrap">
             <form name="myform" id="myform" method="post">
@@ -24,8 +24,7 @@
                         </tr>
                         <volist name="book" id="b">
                         <tr>
-                            <td title="509"><a target="_blank" href="#" title="509">{$b.bname}</a> 
-                            </td>
+                            <td>{$b.bname}</td>
                             <td>{$b.bauthor}</td>
                             <td>{$b.btype}</td>
                             <td>{$b.bintroduction|msubstr=0,30,'utf-8'}</td>
@@ -37,7 +36,7 @@
                         </tr>
                         </volist>
                     </table>
-                    <div class="list-page"> 2 条 1/1 页</div>
+                    <div class="list-page">{$page}</div>
                 </div>
             </form>
         </div>

@@ -61,13 +61,14 @@
     <!--/sidebar-->
     <div class="main-wrap">
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Admin/index/index');?>">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="<?php echo U('Admin/user/alluser');?>">账号管理</a><span class="crumb-step">&gt;</span><span>新增账号</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Admin/index/index');?>">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="<?php echo U('Admin/user/alluser');?>">账号管理</a><span class="crumb-step">&gt;</span><span>修改账号</span></div>
         </div>
         <div class="result-wrap">
             <div class="result-content">
-                <form action="<?php echo U('Admin/user/newuser');?>" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                <form action="<?php echo U('Admin/user/edituser');?>" method="post" id="myform" name="myform" enctype="multipart/form-data">
                     <table class="insert-tab" width="100%">
-                        <tbody><tr>
+                        <tbody>
+                        <?php if(is_array($user)): $i = 0; $__LIST__ = $user;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$u): $mod = ($i % 2 );++$i;?><tr>
                             <th width="120"><i class="require-red">*</i>身份：</th>
                             <td>
                                 <select name="colId" id="catid" class="required">
@@ -79,25 +80,25 @@
                             <tr>
                                 <th><i class="require-red">*</i>昵称：</th>
                                 <td>
-                                    <input class="common-text required" required="required" id="nickname" name="nickname" size="50" value="" type="text">
+                                    <input class="common-text required" required="required" id="nickname" name="nickname" size="50" value="<?php echo ($u["nickname"]); ?>" type="text">
                                 </td>
                             </tr>
                             <tr>
                                 <th><i class="require-red">*</i>账号：</th>
                                 <td>
-                                    <input class="common-text required" required="required" id="username" name="username" size="50" value="" type="text">
+                                    <input class="common-text required" required="required" readonly="readonly" id="username" name="username" size="50" value="<?php echo ($u["username"]); ?>" type="text">
                                 </td>
                             </tr>
                             <tr>
                                 <th><i class="require-red">*</i>密码：</th>
                                 <td>
-                                    <input class="common-text required" required="required" id="password" name="password" size="50" value="" type="password">
+                                    <input class="common-text required" required="required" id="password" name="password" size="50" value="<?php echo ($u["password"]); ?>" type="password">
                                 </td>
                             </tr>
                             <tr>
                                 <th><i class="require-red">*</i>确认密码：</th>
                                 <td>
-                                    <input class="common-text required" required="required" id="passwords" name="passwords" size="50" value="" type="password">
+                                    <input class="common-text required" required="required" id="passwords" name="passwords" size="50" value="<?php echo ($u["password"]); ?>" type="password">
                                 </td>
                             </tr>
                             <tr>
@@ -110,13 +111,13 @@
                             <tr>
                                 <th>电话：</th>
                                 <td>
-                                    <input class="common-text required" id="tel" name="tel" size="50" value="" type="telephone">
+                                    <input class="common-text required" id="tel" name="tel" size="50" value="<?php echo ($u["tel"]); ?>" type="telephone">
                                 </td>
                             </tr>
                             <tr>
                                 <th>邮箱：</th>
                                 <td>
-                                    <input class="common-text required" id="email" name="email" size="50" value="" type="email">
+                                    <input class="common-text required" id="email" name="email" size="50" value="<?php echo ($u["email"]); ?>" type="email">
                                 </td>
                             </tr>
                             <tr>
@@ -125,7 +126,7 @@
                                     <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
                                     <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
                                 </td>
-                            </tr>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                         </tbody></table>
                 </form>
             </div>

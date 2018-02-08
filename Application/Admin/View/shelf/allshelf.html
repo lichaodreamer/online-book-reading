@@ -9,22 +9,20 @@
                 <div class="result-content">
                     <table class="result-tab" width="100%">
                         <tr>
-                            <th>昵称</th>
-                            <th>账号</th>
-                            <th>电话</th>
-                            <th>email</th>
-                            <th>身份</th>
-                            <th>性别</th>
+                            <th>用户</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>类型</th>
+                            <th>时间</th>
                             <th>操作</th>
                         </tr>
-                        <volist name="user" id="u">
+                        <volist name="shelf" id="s">
                         <tr>
-                            <td>{$u.nickname}</td>
-                            <td>{$u.username}</td>
-                            <td>{$u.tel}</td>
-                            <td>{$u.email}</td>
-                            <td>{$u.identity}</td>
-                            <td>{$u.usex}</td>
+                            <td>{$s.username}</td>
+                            <td>{$s.bname}</td>
+                            <td>{$s.bauthor}</td>
+                            <td>{$s.btype}</td>
+                            <td>{$s.stime}</td>
                             <td>
                                 <a class="link-update" href="">修改</a>
                                 <a class="link-del" href="#">删除</a>

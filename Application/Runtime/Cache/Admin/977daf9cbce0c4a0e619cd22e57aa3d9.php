@@ -34,34 +34,24 @@
             <ul class="sidebar-list">
                 <li>
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>账号管理</a>
-                    <ul class="sub-menu" style="display: block;">
+                    <ul class="sub-menu">
                         <li><a href="<?php echo U('Admin/user/alluser');?>"><i class="icon-font">&#xe005;</i>账号列表</a></li>
-                        <li><a href="adduser.html"><i class="icon-font">&#xe026;</i>账号添加</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书签管理</a>
-                    <ul class="sub-menu" style="display: none;">
-                        <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书签列表</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书架管理</a>
-                    <ul class="sub-menu" style="display: none;">
-                        <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书架列表</a></li>
+                        <li><a href="<?php echo U('Admin/user/adduser');?>"><i class="icon-font">&#xe026;</i>账号添加</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书籍管理</a>
-                    <ul class="sub-menu" style="display: none;">
-                        <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书籍列表</a></li>
-                        <li><a href="addbook.html"><i class="icon-font">&#xe002;</i>书籍添加</a></li>
+                    <ul class="sub-menu">
+                        <li><a href="<?php echo U('Admin/books/allbook');?>"><i class="icon-font">&#xe006;</i>书籍列表</a></li>
+                        <li><a href="addbook.html"><i class="icon-font">&#xe026;</i>书籍添加</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>评论管理</a>
-                    <ul class="sub-menu" style="display: none;">
-                        <li><a href="<?php echo U('Admin/comment/allcomment');?>"><i class="icon-font">&#xe00b;</i>评论列表</a></li>
+                    <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>信息管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="<?php echo U('Admin/mark/allmark');?>"><i class="icon-font">&#xe051;</i>书签列表</a></li>
+                        <li><a href="<?php echo U('Admin/shelf/allshelf');?>"><i class="icon-font">&#xe006;</i>书架列表</a></li>
+                         <li><a href="<?php echo U('Admin/comment/allcomment');?>"><i class="icon-font">&#xe00b;</i>评论列表</a></li>
                     </ul>
                 </li>
             </ul>
@@ -72,7 +62,7 @@
     <div class="main-wrap">
 
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">评论管理</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Admin/index/index');?>">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">评论管理</span></div>
         </div>
         <div class="result-wrap">
             <form name="myform" id="myform" method="post">

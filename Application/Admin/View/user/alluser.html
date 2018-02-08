@@ -31,8 +31,8 @@
                             <td>{$u.identity}</td>
                             <td>{$u.usex}</td>
                             <td>
-                                <a class="link-update" href="">修改</a>
-                                <a class="link-del" href="#">删除</a>
+                                <a class="link-update" href="{:U('Admin/user/edituser')}/user/{$u.username}">修改</a>
+                                <a class="link-del" href="javascript:void(0);" name='{$u.username}'>删除</a>
                             </td>
                         </tr>
                         </volist>
@@ -45,4 +45,21 @@
     <!--/main-->
 </div>
 </body>
+<script type="text/javascript">
+    $(".link-del").click(function(){
+        $deluserurl="{:U('Admin/User/deluser')}";
+        $info=$(this).attr("name");
+        $that=$(this).parent().parent();
+        $data={
+            "username":$info
+        };
+        $.post($deluserurl,$data,function(msg){
+            if(msg==1){
+                $that.remove();
+            }else{
+                alert("删除失败了")
+            }           
+        },'json');
+    })
+</script>
 </html>

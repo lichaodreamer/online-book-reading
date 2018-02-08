@@ -36,21 +36,21 @@
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>账号管理</a>
                     <ul class="sub-menu">
                         <li><a href="<?php echo U('Admin/user/alluser');?>"><i class="icon-font">&#xe005;</i>账号列表</a></li>
-                        <li><a href="adduser.html"><i class="icon-font">&#xe026;</i>账号添加</a></li>
+                        <li><a href="<?php echo U('Admin/user/adduser');?>"><i class="icon-font">&#xe026;</i>账号添加</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书籍管理</a>
                     <ul class="sub-menu">
                         <li><a href="<?php echo U('Admin/books/allbook');?>"><i class="icon-font">&#xe006;</i>书籍列表</a></li>
-                        <li><a href="addbook.html"><i class="icon-font">&#xe002;</i>书籍添加</a></li>
+                        <li><a href="addbook.html"><i class="icon-font">&#xe026;</i>书籍添加</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>信息管理</a>
                     <ul class="sub-menu">
-                        <li><a href="allbook.html"><i class="icon-font">&#xe051;</i>书签列表</a></li>
-                        <li><a href="allbook.html"><i class="icon-font">&#xe006;</i>书架列表</a></li>
+                        <li><a href="<?php echo U('Admin/mark/allmark');?>"><i class="icon-font">&#xe051;</i>书签列表</a></li>
+                        <li><a href="<?php echo U('Admin/shelf/allshelf');?>"><i class="icon-font">&#xe006;</i>书架列表</a></li>
                          <li><a href="<?php echo U('Admin/comment/allcomment');?>"><i class="icon-font">&#xe00b;</i>评论列表</a></li>
                     </ul>
                 </li>
@@ -62,7 +62,7 @@
     <div class="main-wrap">
 
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">图书管理</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Admin/index/index');?>">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">图书管理</span></div>
         </div>
         <div class="result-wrap">
             <form name="myform" id="myform" method="post">
@@ -82,8 +82,7 @@
                             <th>操作</th>
                         </tr>
                         <?php if(is_array($book)): $i = 0; $__LIST__ = $book;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$b): $mod = ($i % 2 );++$i;?><tr>
-                            <td title="509"><a target="_blank" href="#" title="509"><?php echo ($b["bname"]); ?></a> 
-                            </td>
+                            <td><?php echo ($b["bname"]); ?></td>
                             <td><?php echo ($b["bauthor"]); ?></td>
                             <td><?php echo ($b["btype"]); ?></td>
                             <td><?php echo (msubstr($b["bintroduction"],0,30,'utf-8')); ?></td>
@@ -94,7 +93,7 @@
                             </td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
-                    <div class="list-page"> 2 条 1/1 页</div>
+                    <div class="list-page"><?php echo ($page); ?></div>
                 </div>
             </form>
         </div>
