@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/bookreading/Public/admin/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/bookreading/Public/admin/css/main.css"/>
     <script type="text/javascript" src="/bookreading/Public/admin/js/libs/modernizr.min.js"></script>
-    <!-- <script type="text/javascript" src="/bookreading/Public/admin/js/libs/jquery-3.2.1.min.js"></script> -->
+    <script type="text/javascript" src="/bookreading/Public/admin/js/libs/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 <div class="topbar-wrap white">
@@ -88,8 +88,8 @@
                             <td><?php echo (msubstr($b["bintroduction"],0,30,'utf-8')); ?></td>
                             <td><?php echo ($b["bpress"]); ?></td>
                             <td>
-                                <a class="link-update" href="addbook.html">修改</a>
-                                <a class="link-del" href="#">删除</a>
+                                <a class="link-update" href="<?php echo U('Admin/books/editbook');?>/Books/<?php echo ($b["bid"]); ?>">修改</a>
+                                <a class="link-del" href="javascript:void(0);" name='<?php echo ($b["bid"]); ?>'>删除</a>
                             </td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
@@ -101,6 +101,23 @@
     <!--/main-->
 </div>
 </body>
+<script type="text/javascript">
+    $(".link-del").click(function(){
+        $deluserurl="<?php echo U('Admin/Books/delbook');?>";
+        $info=$(this).attr("name");
+        $that=$(this).parent().parent();
+        $data={
+            "bid":$info
+        };
+        $.post($deluserurl,$data,function(msg){
+            if(msg==1){
+                $that.remove();
+            }else{
+                alert("删除失败了");
+            }
+        },'json');
+    })
+</script>
 </html>
 <!-- <script type="text/javascript">
     $(document).ready(function(){

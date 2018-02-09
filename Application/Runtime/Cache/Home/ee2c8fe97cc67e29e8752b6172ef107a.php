@@ -102,6 +102,7 @@
 							<tr>
 								<th>序号</th>
 								<th>书名</th>
+								<th>作者</th>
 								<th>出版社</th>
 								<th>字数</th>
 								<th>更新时间</th>	
@@ -112,8 +113,8 @@
 									<td><?php echo ($i); ?></td>
 									<td>
 										<a href="<?php echo U('Home/Index/content');?>/id/<?php echo ($b["bid"]); ?>"><?php echo ($b["bname"]); ?></a>
-										<p>作者：<span><?php echo ($b["bauthor"]); ?></span></p>
 									</td>
+									<td><span><?php echo ($b["bauthor"]); ?></span></td>
 									<td><?php echo ($b["bpress"]); ?></td>
 									<td><?php echo ($b["bnumword"]); ?>万</td>
 									<td><?php echo ($b["btime"]); ?></td>	

@@ -27,6 +27,7 @@
 							<tr>
 								<th>序号</th>
 								<th>书名</th>
+								<th>作者</th>
 								<th>出版社</th>
 								<th>字数</th>
 								<th>更新时间</th>	
@@ -38,8 +39,8 @@
 									<td>{$i}</td>
 									<td>
 										<a href="{:U('Home/Index/content')}/id/{$b.bid}">{$b.bname}</a>
-										<p>作者：<span>{$b.bauthor}</span></p>
 									</td>
+									<td><span>{$b.bauthor}</span></td>
 									<td>{$b.bpress}</td>
 									<td>{$b.bnumword}万</td>
 									<td>{$b.btime}</td>	

@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/bookreading/Public/admin/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/bookreading/Public/admin/css/main.css"/>
     <script type="text/javascript" src="/bookreading/Public/admin/js/libs/modernizr.min.js"></script>
-    <!-- <script type="text/javascript" src="/bookreading/Public/admin/js/libs/jquery-3.2.1.min.js"></script> -->
+    <script type="text/javascript" src="/bookreading/Public/admin/js/libs/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 <div class="topbar-wrap white">
@@ -60,42 +60,60 @@
     
     <!--/sidebar-->
     <div class="main-wrap">
+
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Admin/index/index');?>">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">账号管理</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="<?php echo U('Admin/index/index');?>">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="<?php echo U('Admin/books/allbook');?>">书籍管理</a><span class="crumb-step">&gt;</span><span>图书编辑</span></div>
         </div>
         <div class="result-wrap">
-            <form name="myform" id="myform" method="post">
-                <div class="result-content">
-                    <table class="result-tab" width="100%">
-                        <tr>
-                            <th>用户</th>
-                            <th>书签名</th>
-                            <th>书名</th>
-                            <th>章节名</th>
-                            <th>时间</th>
-                            <th>操作</th>
-                        </tr>
-                        <?php if(is_array($mark)): $i = 0; $__LIST__ = $mark;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$m): $mod = ($i % 2 );++$i;?><tr>
-                            <td><?php echo ($m["username"]); ?></td>
-                            <td><?php echo ($m["mname"]); ?></td>
-                            <td><?php echo ($m["bname"]); ?></td>
-                            <td><?php echo ($m["cname"]); ?></td>
-                            <td><?php echo ($m["mtime"]); ?></td>
-                            <td>
-                                <a class="link-update" href="">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                    </table>
-                    <div class="list-page"><?php echo ($page); ?></div>
-                </div>
-            </form>
+            <div class="result-content">
+                <form action="<?php echo U('Admin/goods/store');?>" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                            <tr>
+                                <th><i class="require-red">*</i>书籍名称：</th>
+                                <td>
+                                    <input class="common-text required" id="pname" name="pname" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>作者：</th>
+                                <td>
+                                    <input class="common-text required" id="pname" name="pname" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>书籍分类：</th>
+                                <td>
+                                    <select name="pcid" id="pcid">
+                                        <option selected>请选择</option>
+                                        <?php if(is_array($product_category)): $i = 0; $__LIST__ = $product_category;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pc): $mod = ($i % 2 );++$i;?><option value="<?php echo ($pc["pcid"]); ?>">名著</option><?php endforeach; endif; else: echo "" ;endif; ?>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>书籍图片：</th>
+                                <td><input name="images" id="images" type="file" ></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>书籍简介：</th>
+                                <td>
+                                    <input class="common-text required" id="pintroduce" name="pintroduce" size="50" value="" type="text">
+                                </td></tr>
+                            
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit" multiple>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
         </div>
+
     </div>
     <!--/main-->
-</div>
-</body>
-</html>
+
 <!-- <script type="text/javascript">
     $(document).ready(function(){
         $(".sidebar-list li a").click(function(){

@@ -21,5 +21,22 @@ class BooksController extends Controller {
         $this->assign('book',$book);
     	$this->display();
     }
+    //删除图书
+    public function delbook(){
+        $bid=I("bid");
+        $bookModel=M("book");
+        $charpterModel=M("charpter");
+        $data=array(
+            "bid"=>$bid
+        );
+        $result=$bookModel->where($data)->delete();
+        $result=$charpterModel->where($data)->delete();
+        $this->ajaxReturn($bid);
+    }
+    //编辑图书
+    public function editbook(){
+
+        $this->display();
+    }
    
 }

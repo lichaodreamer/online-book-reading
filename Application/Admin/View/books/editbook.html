@@ -1,0 +1,58 @@
+<layout name="layout"/>
+    <!--/sidebar-->
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Admin/index/index')}">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="{:U('Admin/books/allbook')}">书籍管理</a><span class="crumb-step">&gt;</span><span>图书编辑</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:U('Admin/books/editbook')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                            <tr>
+                                <th><i class="require-red">*</i>书籍名称：</th>
+                                <td>
+                                    <input class="common-text required" id="pname" name="pname" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>作者：</th>
+                                <td>
+                                    <input class="common-text required" id="pname" name="pname" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>书籍分类：</th>
+                                <td>
+                                    <select name="pcid" id="pcid">
+                                        <option selected>请选择</option>
+                                        <volist name="product_category" id="pc">
+                                            <option value="{$pc.pcid}">名著</option>
+                                        </volist>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>书籍图片：</th>
+                                <td><input name="images" id="images" type="file" ></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>书籍简介：</th>
+                                <td>
+                                    <input class="common-text required" id="pintroduce" name="pintroduce" size="50" value="" type="text">
+                                </td></tr>
+                            
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit" multiple>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->

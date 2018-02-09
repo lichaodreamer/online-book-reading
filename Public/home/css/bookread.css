@@ -299,6 +299,9 @@ a.btn.btn-default {
 	border:1px solid #ddd;
 	text-align: center;
 }
+#content .col-md-9 table td{
+	padding: 12px;
+}
 #content .col-md-9 table td a{
 	text-decoration: none;
 	color: #000;
@@ -306,10 +309,10 @@ a.btn.btn-default {
 #content .col-md-9 table th{
 	text-align: center;
 }
-#content .col-md-9 table td p span{
+/*#content .col-md-9 table td p span{
 	text-indent: 40px;
 	color: #aaa;
-}
+}*/
 #content .col-md-9 table tbody p{
 	/*margin: 50px auto;*/
 	/*border:none;*/
