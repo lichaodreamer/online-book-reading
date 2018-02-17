@@ -3,52 +3,61 @@
     <div class="main-wrap">
 
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Admin/index/index')}">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="{:U('Admin/books/allbook')}">书籍管理</a><span class="crumb-step">&gt;</span><span>图书编辑</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Admin/index/index')}">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="javascript:void(0)">书籍管理</a><span class="crumb-step">&gt;</span><span>书籍修改</span></div>
         </div>
         <div class="result-wrap">
             <div class="result-content">
-                <form action="{:U('Admin/books/editbook')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                <form action="{:U('Admin/books/editbook')}" method="post"  enctype="multipart/form-data">
                     <table class="insert-tab" width="100%">
                         <tbody>
+                        <volist name="book" id="b">
                             <tr>
-                                <th><i class="require-red">*</i>书籍名称：</th>
+                            <input type="hidden" name="bid" value="{$b.bid}">
+                                <th><i class="require-red">*</i>图书名称：</th>
                                 <td>
-                                    <input class="common-text required" id="pname" name="pname" size="50" value="" type="text">
+                                    <input class="common-text required" required="required" name="bname" value="{$b.bname}" size="50" type="text">
                                 </td>
                             </tr>
                             <tr>
-                                <th><i class="require-red">*</i>作者：</th>
+                                <th><i class="require-red">*</i>作者：</th><td><input name="bauthor" type="text" required="required" value="{$b.bauthor}" size="50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>分类：</th>
                                 <td>
-                                    <input class="common-text required" id="pname" name="pname" size="50" value="" type="text">
+                                    <input class="common-text required" required="required" name="btype" value="{$b.btype}" size="50" type="text">
                                 </td>
                             </tr>
                             <tr>
-                                <th><i class="require-red">*</i>书籍分类：</th>
-                                <td>
-                                    <select name="pcid" id="pcid">
-                                        <option selected>请选择</option>
-                                        <volist name="product_category" id="pc">
-                                            <option value="{$pc.pcid}">名著</option>
-                                        </volist>
-                                    </select>
-                                </td>
+                                <th><i class="require-red">*</i>出版社：</th><td><input name="bpress" required="required" type="text" value="{$b.bpress}" size="50"></td>
                             </tr>
                             <tr>
-                                <th><i class="require-red">*</i>书籍图片：</th>
-                                <td><input name="images" id="images" type="file" ></td>
+                                <th><i class="require-red">*</i>出版时间：</th><td><input name="bpress" required="required" type="data" value="{$b.btime}" size="50"></td>
                             </tr>
                             <tr>
-                                <th><i class="require-red">*</i>书籍简介：</th>
+                                <th><i class="require-red">*</i>图书缩略图：</th>
                                 <td>
-                                    <input class="common-text required" id="pintroduce" name="pintroduce" size="50" value="" type="text">
-                                </td></tr>
-                            
+                                    <img src="__PUBLIC__/home/images/bookPhoto/{$b.bphoto}.jpg" height="120px" width="100px" />
+                                    <br/>
+                                    <input name="bimage" type="file" value="{$b.bphoto}"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>字数:</th><td><input name="bnum" type="number" required="required"  value="{$b.bnumword}" style="width:80px">万</td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>分数:</th><td><input name="bscore" type="number" required="required" value="{$b.bscore}" style="width:80px">分</td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>图书介绍：</th>
+                                <td><textarea name="bintroduction" class="common-textarea" cols="10" style="width: 98%;" rows="4">{$b.bintroduction}</textarea></td>
+                            </tr>
                             <tr>
                                 <th></th>
                                 <td>
                                     <input class="btn btn-primary btn6 mr10" value="提交" type="submit" multiple>
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
                                 </td>
                             </tr>
+                        </volist>
                         </tbody></table>
                 </form>
             </div>

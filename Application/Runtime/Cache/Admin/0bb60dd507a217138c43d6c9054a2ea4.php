@@ -88,7 +88,7 @@
                             <td><?php echo (msubstr($b["bintroduction"],0,30,'utf-8')); ?></td>
                             <td><?php echo ($b["bpress"]); ?></td>
                             <td>
-                                <a class="link-update" href="<?php echo U('Admin/books/editbook');?>/Books/<?php echo ($b["bid"]); ?>">修改</a>
+                                <a class="link-update" href="<?php echo U('Admin/books/editbook');?>/id/<?php echo ($b["bid"]); ?>">修改</a>
                                 <a class="link-del" href="javascript:void(0);" name='<?php echo ($b["bid"]); ?>'>删除</a>
                             </td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; ?>

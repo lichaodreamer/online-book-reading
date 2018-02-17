@@ -35,8 +35,43 @@ class BooksController extends Controller {
     }
     //编辑图书
     public function editbook(){
-
-        $this->display();
+        if(IS_POST){
+            $bid=I("bid");
+            $bname=I("bname");
+            $bauthor=I("bauthor");
+            $btype=I("btype");
+            $bpress=I("bpress");
+            $bnum=I("bnum");
+            $bscore=I("bscore");
+            $bintroduction=I("bintroduction");
+            $btime=date("Y-m-d");
+            $bphoto=I("bimage");
+            $data = array(
+                "bname"=>$bname,
+                "bauthor"=>$bauthor,
+                "btype"=>$btype,
+                "bpress"=>$bpress,
+                "bnumword"=>$bnum,
+                "bscore"=>$bscore,
+                "bintroduction"=>$bintroduction,
+                "btime"=>$btime,
+                "bphoto"=>$bphoto
+            );
+            $bookModel=M("book");
+            $result=$bookModel->where(array("bid"=>$bid))->save($data); 
+            // dump($result);die;
+            $this->redirect('Admin/books/allbook');
+        }else{
+            $bid=I("id");
+            $bookModel=M("book");
+            $data=array(
+                "bid"=>$bid
+            );
+            $book=$bookModel->where($data)->select();
+            $this->assign("book",$book);
+            // dump($book);die;
+            $this->display();
+        }
     }
    
 }

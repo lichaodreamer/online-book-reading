@@ -30,7 +30,7 @@
                             <td>{$b.bintroduction|msubstr=0,30,'utf-8'}</td>
                             <td>{$b.bpress}</td>
                             <td>
-                                <a class="link-update" href="{:U('Admin/books/editbook')}/Books/{$b.bid}">修改</a>
+                                <a class="link-update" href="{:U('Admin/books/editbook')}/id/{$b.bid}">修改</a>
                                 <a class="link-del" href="javascript:void(0);" name='{$b.bid}'>删除</a>
                             </td>
                         </tr>
