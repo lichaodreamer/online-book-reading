@@ -29,9 +29,9 @@ class BooksController extends Controller {
         $data=array(
             "bid"=>$bid
         );
-        $result=$bookModel->where($data)->delete();
         $result=$charpterModel->where($data)->delete();
-        $this->ajaxReturn($bid);
+        $result=$bookModel->where($data)->delete();
+        $this->ajaxReturn($result);
     }
     //编辑图书
     public function editbook(){
@@ -54,12 +54,22 @@ class BooksController extends Controller {
                 "bnumword"=>$bnum,
                 "bscore"=>$bscore,
                 "bintroduction"=>$bintroduction,
-                "btime"=>$btime,
-                "bphoto"=>$bphoto
+                "btime"=>$btime
             );
+            $upload = new \Think\Upload();
+            $upload->maxSize=3145728 ;
+            $upload->exts=array('jpg', 'gif','png', 'jpeg');
+            $upload->rootPath="./Public/home/images/bookPhoto/";
+            $upload->saveName = '';
+            $upload->replace=true;
+            $upload->autoSub=false;
+            $info=$upload->upload();
+            if($info['bimage']!=NULL)
+            {
+                $data['bphoto']=$info['bimage']['savename'];
+            }
             $bookModel=M("book");
             $result=$bookModel->where(array("bid"=>$bid))->save($data); 
-            // dump($result);die;
             $this->redirect('Admin/books/allbook');
         }else{
             $bid=I("id");
@@ -84,7 +94,6 @@ class BooksController extends Controller {
             $bscore=I("bscore");
             $bintroduction=I("bintroduction");
             $btime=I("btime");
-            $bphoto=I("bimage");
             $data = array(
                 "bname"=>$bname,
                 "bauthor"=>$bauthor,
@@ -93,33 +102,23 @@ class BooksController extends Controller {
                 "bnumword"=>$bnum,
                 "bscore"=>$bscore,
                 "bintroduction"=>$bintroduction,
-                "btime"=>$btime,
-                "bphoto"=>$bphoto
+                "btime"=>$btime
             );
             $upload = new \Think\Upload();
             $upload->maxSize=3145728 ;
-            $upload->exts=array('jpg', 'gif', 'png', 'jpeg');
-            $upload->rootPath="./Public/upload/";
+            $upload->exts=array('jpg', 'gif','png', 'jpeg');
+            $upload->rootPath="./Public/home/images/bookPhoto/";
             $upload->saveName = '';
             $upload->replace=true;
             $upload->autoSub=false;
             $info=$upload->upload();
-           
-            if($info!=false)
+            if($info['bimage']!=NULL)
             {
-                if($info['pimage']!=NULL)
-                {
-                    $data['pimage']=$info['pimage']['savename'];
-                }
-                if($info['images']!=NULL)
-                {
-                    $data['images']=$info['images']['savename'];
-                }
+                $data['bphoto']=$info['bimage']['savename'];
             }
             $bookModel=M("book");
-            // $result=$bookModel->where(array("bid"=>$bid))->save($data); 
-            dump($info);die;
-            // $this->redirect('Admin/books/allbook');
+            $result=$bookModel->add($data);
+            $this->redirect('Admin/books/allbook');
         }
     }
    

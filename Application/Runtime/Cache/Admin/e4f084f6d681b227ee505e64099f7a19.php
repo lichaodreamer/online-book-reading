@@ -94,15 +94,15 @@
                             <tr>
                                 <th><i class="require-red">*</i>图书缩略图：</th>
                                 <td>
-                                    <img src="/bookreading/Public/home/images/bookPhoto/<?php echo ($b["bphoto"]); ?>.jpg" height="120px" width="100px" />
+                                    <img src="/bookreading/Public/home/images/bookPhoto/<?php echo ($b["bphoto"]); ?>" height="120px" width="100px" />
                                     <br/>
                                     <input name="bimage" type="file" value="<?php echo ($b["bphoto"]); ?>"></td>
                             </tr>
                             <tr>
-                                <th><i class="require-red">*</i>字数:</th><td><input name="bnum" type="number" required="required" min="1" max="5" value="<?php echo ($b["bnumword"]); ?>" style="width:80px">万</td>
+                                <th><i class="require-red">*</i>字数:</th><td><input name="bnum" type="number" required="required" value="<?php echo ($b["bnumword"]); ?>" style="width:80px">万</td>
                             </tr>
                             <tr>
-                                <th><i class="require-red">*</i>分数:</th><td><input name="bscore" type="number" required="required" value="<?php echo ($b["bscore"]); ?>" style="width:80px">分</td>
+                                <th><i class="require-red">*</i>分数:</th><td><input name="bscore" type="number" required="required" min="1" max="5" value="<?php echo ($b["bscore"]); ?>" style="width:80px">分</td>
                             </tr>
                             <tr>
                                 <th><i class="require-red">*</i>图书介绍：</th>

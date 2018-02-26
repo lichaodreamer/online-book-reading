@@ -337,7 +337,7 @@
 											<?php if(is_array($book)): foreach($book as $key=>$b): ?><div class="col-sm-6 col-md-3">
 										      <div class="thumbnail">
 										        <a href="<?php echo U('Home/Index/content');?>/id/<?php echo ($b["bid"]); ?>">
-										          <img src="/bookreading/Public/home/images/bookPhoto/<?php echo ($b["bphoto"]); ?>.jpg" 
+										          <img src="/bookreading/Public/home/images/bookPhoto/<?php echo ($b["bphoto"]); ?>" 
 										             alt="通用的占位符缩略图">
 										          <div class="caption">
 										            <h3>作者：<?php echo ($b["bauthor"]); ?></h3>
@@ -357,7 +357,7 @@
 											</p>
 											<div class="row" style="display: block;">
 												<div class="col-md-4">
-													<img src="/bookreading/Public/home/images/bookPhoto/<?php echo ($b["bphoto"]); ?>.jpg">
+													<img src="/bookreading/Public/home/images/bookPhoto/<?php echo ($b["bphoto"]); ?>">
 												</div>
 												<div class="col-md-7">
 													<a href="<?php echo U('Home/Index/content');?>/id/<?php echo ($b["bid"]); ?>">
@@ -373,7 +373,7 @@
 									</p>
 									<div class="row" style="display: none;">
 										<div class="col-md-4">
-											<img src="/bookreading/Public/home/images/bookPhoto/<?php echo ($b["bphoto"]); ?>.jpg">
+											<img src="/bookreading/Public/home/images/bookPhoto/<?php echo ($b["bphoto"]); ?>">
 										</div>
 										<div class="col-md-7">
 											<a href="<?php echo U('Home/Index/content');?>/id/<?php echo ($b["bid"]); ?>">

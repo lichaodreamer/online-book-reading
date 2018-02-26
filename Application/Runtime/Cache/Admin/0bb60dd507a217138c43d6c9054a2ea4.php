@@ -103,13 +103,14 @@
 </body>
 <script type="text/javascript">
     $(".link-del").click(function(){
-        $deluserurl="<?php echo U('Admin/Books/delbook');?>";
+        $delbookurl="<?php echo U('Admin/Books/delbook');?>";
         $info=$(this).attr("name");
         $that=$(this).parent().parent();
         $data={
             "bid":$info
         };
-        $.post($deluserurl,$data,function(msg){
+        $.post($delbookurl,$data,function(msg){
+            console.log(msg)
             if(msg==1){
                 $that.remove();
             }else{
