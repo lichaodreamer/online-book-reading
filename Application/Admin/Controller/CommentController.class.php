@@ -21,29 +21,17 @@ class CommentController extends Controller {
         $this->assign('comment',$comment);
     	$this->display();
     }
-    public function newuser()
-    {
-        $colId=I("colId");
-        $nickname=I("nickname");
+    public function delcom(){
+        $bid=I("bid");
         $username=I("username");
-        $password=I("password");
-        $sex=I("sex");
-        $tel=I("tel");
-        $email=I("email");
-        $colId=($colId==0)?"用户":"管理员";
-        $data = array(
-            "identity"=>$colId,
-            "nickname"=>$nickname,
+        $ctime=I("ctime");
+        $commentModel=M("comment");
+        $data=array(
+            "bid"=>$bid,
             "username"=>$username,
-            "password"=>$password,
-            "usex"=>$sex,
-            "tel"=>$tel,
-            "email"=>$email
+            "ctime"=>$ctime
         );
-        $userModel=M("user");
-        $result=$userModel->add($data);
-        if($result){
-            $this->redirect('Admin/user/alluser');
-        }
+        $result=$commentModel->where($data)->delete();
+        $this->ajaxReturn($result);
     }
 }

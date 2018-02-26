@@ -43,7 +43,7 @@
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书籍管理</a>
                     <ul class="sub-menu">
                         <li><a href="<?php echo U('Admin/books/allbook');?>"><i class="icon-font">&#xe006;</i>书籍列表</a></li>
-                        <li><a href="addbook.html"><i class="icon-font">&#xe026;</i>书籍添加</a></li>
+                        <li><a href="<?php echo U('Admin/books/addbook');?>"><i class="icon-font">&#xe026;</i>新增书籍</a></li>
                     </ul>
                 </li>
                 <li>
@@ -99,7 +99,7 @@
                                     <input name="bimage" type="file" value="<?php echo ($b["bphoto"]); ?>"></td>
                             </tr>
                             <tr>
-                                <th><i class="require-red">*</i>字数:</th><td><input name="bnum" type="number" required="required"  value="<?php echo ($b["bnumword"]); ?>" style="width:80px">万</td>
+                                <th><i class="require-red">*</i>字数:</th><td><input name="bnum" type="number" required="required" min="1" max="5" value="<?php echo ($b["bnumword"]); ?>" style="width:80px">万</td>
                             </tr>
                             <tr>
                                 <th><i class="require-red">*</i>分数:</th><td><input name="bscore" type="number" required="required" value="<?php echo ($b["bscore"]); ?>" style="width:80px">分</td>

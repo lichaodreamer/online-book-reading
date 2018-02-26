@@ -21,29 +21,15 @@ class ShelfController extends Controller {
         $this->assign('shelf',$shelf);
     	$this->display();
     }
-    public function newuser()
-    {
-        $colId=I("colId");
-        $nickname=I("nickname");
+    public function delshelf(){
+        $bid=I("bid");
         $username=I("username");
-        $password=I("password");
-        $sex=I("sex");
-        $tel=I("tel");
-        $email=I("email");
-        $colId=($colId==0)?"用户":"管理员";
-        $data = array(
-            "identity"=>$colId,
-            "nickname"=>$nickname,
-            "username"=>$username,
-            "password"=>$password,
-            "usex"=>$sex,
-            "tel"=>$tel,
-            "email"=>$email
+        $shelfModel=M("shelf");
+        $data=array(
+            "bid"=>$bid,
+            "username"=>$username
         );
-        $userModel=M("user");
-        $result=$userModel->add($data);
-        if($result){
-            $this->redirect('Admin/user/alluser');
-        }
+        $result=$shelfModel->where($data)->delete();
+        $this->ajaxReturn($result);
     }
 }

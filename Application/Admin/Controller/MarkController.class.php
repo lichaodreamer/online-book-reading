@@ -21,29 +21,17 @@ class MarkController extends Controller {
         $this->assign('mark',$mark);
     	$this->display();
     }
-    public function newuser()
-    {
-        $colId=I("colId");
-        $nickname=I("nickname");
+    public function delmark(){
+        $bid=I("bid");
         $username=I("username");
-        $password=I("password");
-        $sex=I("sex");
-        $tel=I("tel");
-        $email=I("email");
-        $colId=($colId==0)?"用户":"管理员";
-        $data = array(
-            "identity"=>$colId,
-            "nickname"=>$nickname,
+        $cid=I("cid");
+        $markModel=M("mark");
+        $data=array(
+            "bid"=>$bid,
             "username"=>$username,
-            "password"=>$password,
-            "usex"=>$sex,
-            "tel"=>$tel,
-            "email"=>$email
+            "cid"=>$cid
         );
-        $userModel=M("user");
-        $result=$userModel->add($data);
-        if($result){
-            $this->redirect('Admin/user/alluser');
-        }
+        $result=$markModel->where($data)->delete();
+        $this->ajaxReturn($data);
     }
 }

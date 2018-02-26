@@ -73,5 +73,54 @@ class BooksController extends Controller {
             $this->display();
         }
     }
+    public function newbook(){
+        if(IS_POST){
+            $bid=I("bid");
+            $bname=I("bname");
+            $bauthor=I("bauthor");
+            $btype=I("btype");
+            $bpress=I("bpress");
+            $bnum=I("bnum");
+            $bscore=I("bscore");
+            $bintroduction=I("bintroduction");
+            $btime=I("btime");
+            $bphoto=I("bimage");
+            $data = array(
+                "bname"=>$bname,
+                "bauthor"=>$bauthor,
+                "btype"=>$btype,
+                "bpress"=>$bpress,
+                "bnumword"=>$bnum,
+                "bscore"=>$bscore,
+                "bintroduction"=>$bintroduction,
+                "btime"=>$btime,
+                "bphoto"=>$bphoto
+            );
+            $upload = new \Think\Upload();
+            $upload->maxSize=3145728 ;
+            $upload->exts=array('jpg', 'gif', 'png', 'jpeg');
+            $upload->rootPath="./Public/upload/";
+            $upload->saveName = '';
+            $upload->replace=true;
+            $upload->autoSub=false;
+            $info=$upload->upload();
+           
+            if($info!=false)
+            {
+                if($info['pimage']!=NULL)
+                {
+                    $data['pimage']=$info['pimage']['savename'];
+                }
+                if($info['images']!=NULL)
+                {
+                    $data['images']=$info['images']['savename'];
+                }
+            }
+            $bookModel=M("book");
+            // $result=$bookModel->where(array("bid"=>$bid))->save($data); 
+            dump($info);die;
+            // $this->redirect('Admin/books/allbook');
+        }
+    }
    
 }

@@ -43,7 +43,7 @@
                     <a href="javascript:void(0);"><i class="icon-font">&#xe018;</i>书籍管理</a>
                     <ul class="sub-menu">
                         <li><a href="<?php echo U('Admin/books/allbook');?>"><i class="icon-font">&#xe006;</i>书籍列表</a></li>
-                        <li><a href="addbook.html"><i class="icon-font">&#xe026;</i>书籍添加</a></li>
+                        <li><a href="<?php echo U('Admin/books/addbook');?>"><i class="icon-font">&#xe026;</i>新增书籍</a></li>
                     </ul>
                 </li>
                 <li>
@@ -68,7 +68,7 @@
             <form name="myform" id="myform" method="post">
                 <div class="result-title">
                     <div class="result-list">
-                        <a href="addbook.html"><i class="icon-font"></i>新增图书</a>
+                        <a href="<?php echo U('Admin/books/addbook');?>"><i class="icon-font"></i>新增书籍</a>
                     </div>
                 </div>
                 <div class="result-content">

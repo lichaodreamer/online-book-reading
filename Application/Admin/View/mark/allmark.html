@@ -24,8 +24,7 @@
                             <td>{$m.cname}</td>
                             <td>{$m.mtime}</td>
                             <td>
-                                <a class="link-update" href="">修改</a>
-                                <a class="link-del" href="#">删除</a>
+                                <a class="link-del" href="javascript:void(0);" name='{$m.bid},{$m.cid},{$m.username}'>删除</a>
                             </td>
                         </tr>
                         </volist>
@@ -38,4 +37,23 @@
     <!--/main-->
 </div>
 </body>
+<script type="text/javascript">
+    $(".link-del").click(function(){
+        $delmark="{:U('Admin/Mark/delmark')}";
+        $info=$(this).attr("name").split(",");
+        $that=$(this).parent().parent();
+        $data={
+            "bid":$info[0],
+            "cid":$info[1],
+            "username":$info[2]
+        };
+        $.post($delmark,$data,function(msg){
+            if(msg==1){
+                $that.remove();
+            }else{
+                alert("删除失败了");
+            }
+        },'json');
+    })
+</script>
 </html>
