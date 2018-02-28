@@ -8,6 +8,7 @@ class LoginController extends Controller {
         $this->display();
     }
     //login
+    
     public function login(){
         
         $this->display();
