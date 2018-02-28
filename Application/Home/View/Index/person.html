@@ -1,0 +1,347 @@
+<layout name="layout" />
+<title>个人中心</title>
+	<section id="center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<ul class="leftlist">
+						<li class="listitem active">
+							<a href="{:U('Home/Index/person')}/id/mycenter"><span class="glyphicon glyphicon glyphicon-user"></span>&nbsp;个人资料</a>
+						</li>
+						<li class="listitem">
+							<a href="{:U('Home/Index/person')}/id/mymark"><span class=" glyphicon glyphicon-bookmark"></span>&nbsp;我的书签</a>
+						</li>
+						<li class="listitem">
+							<a href="{:U('Home/Index/person')}/id/myshelf"><span class=" glyphicon glyphicon-book"></span>&nbsp;我的书架</a>
+						</li>
+						<li class="listitem">
+							<a href="{:U('Home/Index/person')}/id/mycomment"><span class="glyphicon glyphicon-envelope"></span>&nbsp;我的评论</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-9">
+					<div class="row person myself">
+						<div class="centerTitle">
+							<span class="glyphicon glyphicon glyphicon-user"></span>&nbsp;个人中心
+						</div>
+						<div class="row">
+							<volist name="user" id="u">
+								<div class="col-md-2">
+									<img src="__PUBLIC__/home/images/userPhoto/{$u.userphoto}.png">
+								</div>
+								<div class="col-md-10">
+									<div class="col-md-6">
+										<p>昵称：<span id="loadname">{$u.nickname}</span>&nbsp;&nbsp;&nbsp;<sub>{$u.usex}</sub></p>
+									<p>账号：<span>{$u.username}</span></p>
+									<p>身份：<span>{$u.identity}</span></p>
+									</div>
+									<div class="col-md-6">
+										<h5>联系方式:<span class="pull-right glyphicon glyphicon glyphicon-pencil" data-toggle="modal" data-target="#editmyinfo"></span></h5>
+										<p>电话：<span id="loadtel">{$u.tel}</span></p>
+										<p>Email：<span id="loademail">{$u.email}</span></p>
+									</div>
+								</div>
+							</volist>
+						</div>
+					</div>
+					<div class="row person" style="display: none;">
+						<div class="centerTitle">
+							<span class="glyphicon glyphicon glyphicon-bookmark"></span>&nbsp;我的书签
+						</div>
+						<div class="col-md-12">
+							<table class="table table-responsive table-hover">
+								<thead>
+									<tr>
+										<th>标签名</th>
+										<th>书名</th>
+										<th>章节名</th>
+										<th>时间</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+								<volist name="mark" id="m">
+									<tr class="marktr">
+										<td>{$m.mname}</td>
+										<td>{$m.bname}</td>
+										<td>{$m.cname}</td>
+										<td>{$m.mtime}</td>
+										<td>
+											<ul>
+											<li><a href="" name='{$m.bid},{$m.cid}' class="editmarkname" data-toggle="modal" data-target="#bookmarkmodel">修改&nbsp;&nbsp;</a></li>
+											  <li><a href="javascript:void(0);" class="delmark" name='{$m.bid},{$m.cid}'>删除</a></li>
+											</ul>
+										</td>
+									</tr>
+								</volist>
+								</tbody>
+							</table>
+						</div>	
+						
+					</div>
+					{$markpage}
+					<div class="row person" style="display: none;">
+						<div class="centerTitle">
+							<span class="glyphicon glyphicon glyphicon-book"></span>&nbsp;我的书架
+						</div>
+						<div class="col-md-12">
+							<table class="table table-responsive table-hover">
+								<thead>
+									<tr>
+										<th>书名</th>
+										<th>作者</th>
+										<th>类型</th>
+										<th>时间</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+								<volist name="shelf" id="s">
+									<tr>
+										<td>{$s.bname}</td>
+										<td>{$s.bauthor}</td>
+										<td>{$s.btype}</td>
+										<td>{$s.stime}</td>
+										<td>
+											<ul>
+											  <li><a href="javascript:void(0);" name='{$s.bid}' class="delshelf">删除</a></li>
+											</ul>
+										</td>
+									</tr>
+								</volist>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					{$shelfpage}
+					<div class="row person" style="display: none;">
+						<div class="centerTitle">
+							<span class="glyphicon glyphicon glyphicon-envelope"></span>&nbsp;我的评论
+						</div>
+						<div class="col-md-12">
+							<table class="table table-responsive table-hover">
+								<thead>
+									<tr>
+										<th>书名</th>
+										<th>作者</th>
+										<th>类型</th>
+										<th>内容</th>
+										<th>时间</th>
+									</tr>
+								</thead>
+								<tbody>
+								<volist name="comment" id="co">
+									<tr>
+										<td>{$co.bname}</td>
+										<td>{$co.bauthor}</td>
+										<td>{$co.btype}</td>
+										<td>{$co.comment}</td>
+										<td>{$co.ctime}</td>
+									</tr>
+								</volist>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					{$commentpage}
+					</div>
+
+<!-- 编辑个人资料模态框 -->
+<div class="modal fade" id="editmyinfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">编辑信息</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="nickname" class="control-label">昵称:</label>
+            <input type="text" class="form-control" value="{$u.nickname}" id="nickname">
+          </div>
+          <div class="form-group">
+            <label for="message-tel" class="control-label">电话:</label>
+            <input type="text" class="form-control"  value="{$u.tel}" id="message-tel" />
+          </div>
+          <div class="form-group">
+            <label for="message-email" class="control-label">Email:</label>
+            <input type="text" class="form-control"  value="{$u.email}" id="message-email" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" id="editinfo" class="btn btn-primary" data-dismiss="modal">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 编辑个人资料模态框 -->
+<!-- 书签模态框 -->
+<div class="modal fade" id="bookmarkmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">书签信息</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="mark-name" class="control-label">书签名:</label>
+            <input type="text" class="form-control" value="我的书签" id="mark-name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" id="editmark" class="btn btn-primary" data-dismiss="modal">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 书签模态框 -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="modalFrame"></div>
+<script type="text/javascript" src="__PUBLIC__/home/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/wow.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/myslider.js"></script>
+<script type="text/javascript">
+	$(".mypage").hide();
+	var url = this.location.pathname;
+	var lists=$("#center .leftlist .listitem");
+	var person=$("#center .col-md-9 .person");
+	if(url.indexOf("mycenter")>0){
+		lists.eq(0).addClass("active").siblings().removeClass("active");
+		person.eq(0).show().siblings().hide();
+	}
+	if(url.indexOf("mymark")>0){
+		lists.eq(1).addClass("active").siblings().removeClass("active");
+		person.eq(1).show().siblings().hide();
+		$(".mypage").hide().eq(0).show();
+	}
+	if(url.indexOf("myshelf")>0){
+		lists.eq(2).addClass("active").siblings().removeClass("active");
+		person.eq(2).show().siblings().hide();
+		$(".mypage").hide().eq(1).show();
+	}
+	if(url.indexOf("mycomment")>0){
+		lists.eq(3).addClass("active").siblings().removeClass("active");
+		person.eq(3).show().siblings().hide();
+		$(".mypage").hide().eq(2).show();
+	}
+	// 个人信息编辑
+	// 输入框判断
+	$("#nickname").blur(function(){
+		$nickname=$("#nickname").val();
+		if($nickname==""){
+			$("#nickname").attr("placeholder","昵称不能为空").focus();
+		}
+	});
+	$("#message-tel").blur(function(){
+		$tel=$("#message-tel").val();
+        let ret = /^1[3|4|5|8][0-9]\d{8}$/;
+        if(ret.test($tel)==false){
+        	$("#message-tel").val("");
+        	$("#message-tel").attr("placeholder","电话格式不正确").focus();
+        }
+	});
+	$("#message-email").blur(function(){
+		$email=$("#message-email").val();
+        let ret = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if(ret.test($email)==false){
+        	$("#message-email").val("");
+        	$("#message-email").attr("placeholder","邮箱格式不正确").focus();
+        }
+	});
+	$("#mark-name").blur(function(){
+		$markname=$("#mark-name").val();
+		if($markname==""){
+			$("#mark-name").attr("placeholder","书签名不能为空").focus();
+		}else if($markname.length>10){
+			$("#mark-name").attr("placeholder","书签名不能大于10个字符").focus();
+		}
+	});
+	// 提交个人信息
+	$("#editinfo").click(function(){
+		$infourl="{:U('Home/Index/editinfo')}"; 
+		$data={
+	  		"nickname":String($("#nickname").val()),
+	  		"tel":String($("#message-tel").val()),
+		  	"email":String($("#message-email").val())
+	  	};
+	  	$.post($infourl,$data,function(msg){
+		   	if(msg==1){
+		   		$(".modalFrame").html("亲，个人信息修改成功了！！！").show().delay(1500).fadeOut();
+		   		$("#loadname").html($("#nickname").val());
+		   		$("#loadtel").html($("#message-tel").val());
+		   		$("#loademail").html($("#message-email").val());
+		   	}else{
+		    	$(".modalFrame").html("亲，个人信息没有任何修改呦！！！").show().delay(1500).fadeOut();
+		   	}
+	    },'json');
+	});
+	$(".editmarkname").click(function(){
+		$info=$(this).attr("name").split(",");
+		$that=$(this).parent().parent().parent().parent().children("td").eq(0);
+		$("#editmark").click(function(){
+			$markurl="{:U('Home/Index/editmark')}"; 
+			$data={
+		  		"bid":$info[0],
+		  		"cid":$info[1],
+		  		"mname":String($("#mark-name").val())
+		  	};
+		  	$.post($markurl,$data,function(msg){
+			   	if(msg==1){
+			   		$(".modalFrame").html("亲，书签信息修改成功了！！！").show().delay(1500).fadeOut();
+			   		$that.html($("#mark-name").val());
+			   	}else{
+			    	$(".modalFrame").html("亲，书签信息没有任何修改呦！！！").show().delay(1500).fadeOut();
+			   	}
+		    },'json');
+		})
+	})
+	// 删除书签
+	$(".delmark").click(function(){
+		$delmarkurl="{:U('Home/Index/delmarkurl')}";
+		$info=$(this).attr("name").split(",");
+		$that=$(this).parent().parent().parent().parent();
+		$data={
+			"bid":$info[0],
+	  		"cid":$info[1]
+		};
+		$.post($delmarkurl,$data,function(msg){
+			if(msg==1){
+		   		$(".modalFrame").html("亲，书签删除成功了！！！").show().delay(1500).fadeOut();
+			   	$that.remove();
+		   	}else{
+		    	$(".modalFrame").html("亲，书签删除失败了！！！").show().delay(1500).fadeOut();
+		   	}		   	
+	    },'json');
+	})
+	//删除书架
+	$(".delshelf").click(function(){
+		$delshelfurl="{:U('Home/Index/delshelfurl')}";
+		$info=$(this).attr("name");
+		$that=$(this).parent().parent().parent().parent();
+		$data={
+			"bid":$info
+		};
+		$.post($delshelfurl,$data,function(msg){
+			if(msg==1){
+		   		$(".modalFrame").html("亲，删除成功了！！！").show().delay(1500).fadeOut();
+			   	$that.remove();
+		   	}else{
+		    	$(".modalFrame").html("亲，删除失败了！！！").show().delay(1500).fadeOut();
+		   	}		   	
+	    },'json');
+	})
+
+</script>
+</html>
