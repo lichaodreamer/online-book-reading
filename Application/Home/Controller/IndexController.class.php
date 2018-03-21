@@ -4,8 +4,14 @@ use Think\Controller;
 class IndexController extends Controller {
 	//首页
     public function index(){
+        $username=session("username");
+        if($username){
+            $userModel=M('user');
+            $user=$userModel->where(array('username'=>$username))->select();   
+        }
         $bookModel=M('book');
         $book=$bookModel->limit(10)->select();
+        $this->assign('user',$user);
         $this->assign('book',$book);
         $this->display();
     }
@@ -287,5 +293,9 @@ class IndexController extends Controller {
         $result=$shelfModel->where($data)->delete(); 
         $this->ajaxReturn($result);
     }
-   
+   // 注销登录
+    public function signout(){
+        session("username",null);
+        $this->redirect("Home/Index/index");
+    }
 }
