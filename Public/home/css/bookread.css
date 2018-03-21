@@ -479,6 +479,9 @@ a.btn.btn-default {
 	padding-bottom: 10px;
 	border-bottom: 2px solid #ddd;
 }
+#bookbody .container .comment .formcomment p{
+	margin: 6px 0px;
+}
 #bookbody .container .comment .row{
 	margin:10px 0px; 
 }

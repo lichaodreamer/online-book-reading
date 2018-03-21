@@ -52,7 +52,7 @@
 							    <div class="tab-pane fade" id="class">
 							       <h4>图书目录<span class="pull-right"><a href="" data-toggle="tab">展开</a></span></h4>
 							       <volist name="char" id="c">
-							       	<h5><a href="">第{$c.cid}章&nbsp;{$c.cname}</a></h5>
+							       	<h5><a href="{:U('Home/Index/reading')}/id/{$book[0]['bid']}/cid/{$c.cid}">第{$c.cid}章&nbsp;{$c.cname}</a></h5>
 							       </volist>
 							    </div>
 							    <div class="tab-pane fade" id="ios">

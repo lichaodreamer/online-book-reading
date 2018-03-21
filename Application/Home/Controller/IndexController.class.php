@@ -59,19 +59,23 @@ class IndexController extends Controller {
         $username=session("username");
         $charpterModel=M('charpter');
         $markModel=M('mark');
-        $data=array(
-            "bid"=>$id,
-            "username"=>$username
-        );
-        $newmark=$markModel->where($data)->order('cid desc')->limit(0,1)->field('cid')->select();//判断最新书签
-        if(($newmark[0]['cid']==null)||($username="")){
-            $charpter=$charpterModel->where(array("bid"=>$id))->limit(0,1)->select();
-            $charpter[0]['mark']=0;
+        if(I("cid")==""){
+            $data=array(
+                "bid"=>$id,
+                "username"=>$username
+            );
+            $newmark=$markModel->where($data)->order('cid desc')->limit(0,1)->field('cid')->select();//判断最新书签
+            if(($newmark[0]['cid']==null)||($username="")){
+                $charpter=$charpterModel->where(array("bid"=>$id))->limit(0,1)->select();
+                $charpter[0]['mark']=0;
+            }else{
+                $charpter=$charpterModel->where(array("bid"=>$id,"cid"=>$newmark[0]['cid']))->select();
+                $charpter[0]['mark']=1;
+            };
         }else{
-            $charpter=$charpterModel->where(array("bid"=>$id,"cid"=>$newmark[0]['cid']))->select();
-            $charpter[0]['mark']=1;
-        };
-        // dump($charpter);die;
+            $cid=I("cid");
+            $charpter=$charpterModel->where(array("bid"=>$id,"cid"=>$cid))->select();
+        }
         $this->assign('charpter',$charpter);
     	$this->display();
     }
