@@ -1,0 +1,65 @@
+<layout name="layout" />
+    <!--/sidebar-->
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Admin/index/index')}">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">图书管理</span></div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="{:U('Admin/books/addbook')}"><i class="icon-font"></i>新增书籍</a>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>类型</th>
+                            <th>简介</th>
+                            <th>出版社</th>
+                            <th>操作</th>
+                        </tr>
+                        <volist name="book" id="b">
+                        <tr>
+                            <td>{$b.bname}</td>
+                            <td>{$b.bauthor}</td>
+                            <td>{$b.btype}</td>
+                            <td>{$b.bintroduction|msubstr=0,30,'utf-8'}</td>
+                            <td>{$b.bpress}</td>
+                            <td>
+                                <a class="link-update" href="{:U('Admin/books/editbook')}/id/{$b.bid}">修改</a>
+                                <a class="link-del" href="javascript:void(0);" name='{$b.bid}'>删除</a>
+                            </td>
+                        </tr>
+                        </volist>
+                    </table>
+                    <div class="list-page">{$page}</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+<script type="text/javascript">
+    $(".link-del").click(function(){
+        $delbookurl="{:U('Admin/Books/delbook')}";
+        $info=$(this).attr("name");
+        $that=$(this).parent().parent();
+        $data={
+            "bid":$info
+        };
+        $.post($delbookurl,$data,function(msg){
+            console.log(msg)
+            if(msg==1){
+                $that.remove();
+            }else{
+                alert("删除失败了");
+            }
+        },'json');
+    })
+</script>
+</html>

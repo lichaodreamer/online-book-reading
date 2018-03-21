@@ -1,0 +1,63 @@
+<layout name="layout"/>
+    <!--/sidebar-->
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Admin/index/index')}">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="javascript:void(0)">书籍管理</a><span class="crumb-step">&gt;</span><span>书籍新增</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:U('Admin/books/newbook')}" method="post"  enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                            <tr>
+                            <input type="hidden" name="bid" value="{$b.bid}">
+                                <th><i class="require-red">*</i>图书名称：</th>
+                                <td>
+                                    <input class="common-text required" required="required" name="bname" value="" placeholder="名称" size="50" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>作者：</th><td><input name="bauthor" type="text" required="required" value="" placeholder="作者" size="50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>分类：</th>
+                                <td>
+                                    <input class="common-text required" required="required" name="btype" value="" placeholder="图书分类" size="50" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>出版社：</th><td><input name="bpress" required="required" type="text" value="" placeholder="出版社" size="50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>出版时间：</th><td><input name="btime" required="required" type="date" value="" placeholder="出版时间" size="50"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>图书缩略图：</th>
+                                <td>
+                                    <input name="bimage" type="file" value="12"></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>字数:</th><td><input name="bnum" type="number" required="required" min="1" max="5" value="" style="width:80px">万</td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>分数:</th><td><input name="bscore" type="number" required="required" value="" style="width:80px">分</td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>图书介绍：</th>
+                                <td><textarea name="bintroduction" class="common-textarea" cols="10" placeholder="图书简介" style="width: 98%;" rows="4"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit" multiple>
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->

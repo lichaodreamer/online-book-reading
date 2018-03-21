@@ -1,0 +1,62 @@
+<layout name="layout" />
+    <!--/sidebar-->
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Admin/index/index')}">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">评论管理</span></div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>昵称</th>
+                            <th>账号</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>内容</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+                        <volist name="comment" id="c">
+                        <tr>
+                            <td>{$c.nickname}</td>
+                            <td>{$c.username}</td>
+                            <td>{$c.bname}</td>
+                            <td>{$c.bauthor}</td>
+                            <td>{$c.comment}</td>
+                            <td>{$c.ctime}</td>
+                            <td>
+                                <a class="link-del" href="javascript:void(0);" name='{$c.bid},{$c.username},{$c.ctime}'>删除</a>
+                            </td>
+                        </tr>
+                       </volist>
+                    </table>
+                    <div class="list-page">{$page}</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+<script type="text/javascript">
+    $(".link-del").click(function(){
+        $delcom="{:U('Admin/Comment/delcom')}";
+        $info=$(this).attr("name").split(",");
+        $that=$(this).parent().parent();
+        $data={
+            "bid":$info[0],
+            "username":$info[1],
+            "ctime":$info[2]
+        };
+        $.post($delcom,$data,function(msg){
+            if(msg==1){
+                $that.remove();
+            }else{
+                alert("删除失败了");
+            }
+        },'json');
+    })
+</script>
+</html>

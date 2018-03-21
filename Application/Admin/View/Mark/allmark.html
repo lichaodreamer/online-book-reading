@@ -1,0 +1,59 @@
+<layout name="layout" />
+    <!--/sidebar-->
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:U('Admin/index/index')}">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">账号管理</span></div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>用户</th>
+                            <th>书签名</th>
+                            <th>书名</th>
+                            <th>章节名</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+                        <volist name="mark" id="m">
+                        <tr>
+                            <td>{$m.username}</td>
+                            <td>{$m.mname}</td>
+                            <td>{$m.bname}</td>
+                            <td>{$m.cname}</td>
+                            <td>{$m.mtime}</td>
+                            <td>
+                                <a class="link-del" href="javascript:void(0);" name='{$m.bid},{$m.cid},{$m.username}'>删除</a>
+                            </td>
+                        </tr>
+                        </volist>
+                    </table>
+                    <div class="list-page">{$page}</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+<script type="text/javascript">
+    $(".link-del").click(function(){
+        $delmark="{:U('Admin/Mark/delmark')}";
+        $info=$(this).attr("name").split(",");
+        $that=$(this).parent().parent();
+        $data={
+            "bid":$info[0],
+            "cid":$info[1],
+            "username":$info[2]
+        };
+        $.post($delmark,$data,function(msg){
+            if(msg==1){
+                $that.remove();
+            }else{
+                alert("删除失败了");
+            }
+        },'json');
+    })
+</script>
+</html>
